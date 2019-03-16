@@ -82,6 +82,18 @@
 
 </body>
 
+<script>
+    $(document).on('click', '.login__submit', function(e) {
+        window.location.href = "{{ url('/') }}";
+
+        if (animating) return;
+        animating = true;
+        var that = this;
+        ripple($(that), e);
+        $(that).addClass('processing');
+    });
+</script>
+
 
 <!-- <script>
     $(document).ready(function () {
@@ -150,4 +162,4 @@
     });
 </script> -->
 
-</html>
+</html> 

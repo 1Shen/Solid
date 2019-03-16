@@ -89,12 +89,6 @@ $(function () {
         sound['mouseClick'] ? sound['mouseClick'].play() : null;
     });
 
-    $('#btnExit').click(function () {
-        sound['mouseClick'] ? sound['mouseClick'].play() : null;
-        window.location.replace("../../index.html");
-    });
-
-
     // 提示按钮
     $('#btnTip').click(function () {
         pause();

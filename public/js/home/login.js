@@ -16,17 +16,6 @@ $(function () {
         elem.append($ripple);
     };
 
-    $(document).on('click', '.login__submit', function (e) {
-        window.location.href = "../../html/home/index.html";
-
-        if (animating) return;
-        animating = true;
-        var that = this;
-        ripple($(that), e);
-        $(that).addClass('processing');
-    });
-
-
     // login-btn的click事件
     $('#login-btn').click(function () {
         // 标题、按钮、底部文字消失

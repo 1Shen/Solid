@@ -113,8 +113,7 @@
             </div>
         </div>
         <!-- 放大镜 -->
-        <i onclick="openMagnifier()" class="fa fa-search button-raised button-circle button-jumbo" id="btnSearch"
-            aria-hidden="true" style="display:none"></i>
+        <i onclick="openMagnifier()" class="fa fa-search button-raised button-circle button-jumbo" id="btnSearch" aria-hidden="true" style="display:none"></i>
 
     </div>
 
@@ -211,8 +210,7 @@
 
         </div>
 
-        <div class=" button button-raised button-circle button-jumbo button-small" id="btnReturnIns"><i class="fa fa-times"
-                aria-hidden="true"></i></div>
+        <div class=" button button-raised button-circle button-jumbo button-small" id="btnReturnIns"><i class="fa fa-times" aria-hidden="true"></i></div>
     </div>
 
     <div class="text" id="textMisson" style="display:none">这是任务目标</div>
@@ -221,8 +219,7 @@
         <div class="tip-body">
 
         </div>
-        <div class=" button button-raised button-circle button-jumbo button-small" id="btnReturnTip"><i class="fa fa-times"
-                aria-hidden="true"></i></div>
+        <div class=" button button-raised button-circle button-jumbo button-small" id="btnReturnTip"><i class="fa fa-times" aria-hidden="true"></i></div>
     </div>
     <div class="button button-raised button-circle button-jumbo" id="btnPause" style="display:none">暂停</div>
 
@@ -236,4 +233,11 @@
     <input type="hidden" value="0" id="loadStatusListener" onchange="loadStatusChange()">
 </body>
 
-</html>
+<script>
+    $('#btnExit').click(function() {
+        sound['mouseClick'] ? sound['mouseClick'].play() : null;
+        window.location.replace("{{ url('/') }}");
+    });
+</script>
+
+</html> 

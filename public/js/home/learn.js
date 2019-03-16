@@ -1,5 +1,4 @@
 $(function () {
-    $('#video-container').load('../../html/learn/step1.html');
 
     $('li.home').removeClass('active');
     $('li.learn').addClass('active');
