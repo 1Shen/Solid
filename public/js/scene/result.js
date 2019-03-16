@@ -37,13 +37,13 @@ $(function () {
         $(this).addClass('active');
 
         let fileName = $(this).attr('data-img');
-        let src = "../../static/images/bg/new/" + fileName + ".png";
+        let src = "/static/images/bg/new/" + fileName + ".png";
         $("#map-bg").find('.bg').attr('src', src);
 
         $("#map-bg .introduce").hide();
 
-        $("#map-bg .introduce").load('../../html/scene/resText/' + fileName + '.html', function () {
-            let gifPath = "../../static/images/molecule/" + fileName + ".gif";
+        $("#map-bg .introduce").load('/html/scene/resText/' + fileName + '.html', function () {
+            let gifPath = "/static/images/molecule/" + fileName + ".gif";
             $("#map-bg .gif").css('top', $("#map-bg .introduce .text").attr('data-img-top'));
             $("#map-bg .gif").css('left', $("#map-bg .introduce .text").attr('data-img-left'));
 
