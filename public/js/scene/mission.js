@@ -161,7 +161,7 @@ function initTip() {
         $('.tip-body').css('margin-right', '-150px');
     });
 
-    $('.tip-body').load('../../html/scene/tipText/mission_0.html');
+    $('.tip-body').load('/html/scene/tipText/mission_0.html');
 }
 
 // 完成任务
@@ -203,5 +203,5 @@ function stepComplete(step, stepIndex) {
 
 // 切换任务提示
 function switchMissionTip(step, callback) {
-    $('.tip-body').load('../../html/scene/tipText/mission_' + step + '.html', callback);
+    $('.tip-body').load('/html/scene/tipText/mission_' + step + '.html', callback);
 }

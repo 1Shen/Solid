@@ -319,7 +319,7 @@ function dropItem() {
 
 // 设置div的图片
 function setItemImage($div, itemName, showMsg = true) {
-    let imgPath = "../../static/images/item/" + itemName + ".png";
+    let imgPath = "/static/images/item/" + itemName + ".png";
     $div.children().first().attr('src', imgPath);
     $div.data('name', itemName);
     $div.attr('data-name', itemName);
@@ -554,13 +554,13 @@ function loadInsText() {
         }
     }
 
-    $('#text1').load('../../html/scene/insText/text1.html', callback);
-    $('#text2').load('../../html/scene/insText/text2.html', callback);
-    $('#text3').load('../../html/scene/insText/text3.html', callback);
-    $('#text4').load('../../html/scene/insText/text4.html', callback);
-    $('#text5').load('../../html/scene/insText/text5.html', callback);
-    $('#text6').load('../../html/scene/insText/text6.html', callback);
-    $('#text7').load('../../html/scene/insText/text7.html', callback);
+    $('#text1').load('/html/scene/insText/text1.html', callback);
+    $('#text2').load('/html/scene/insText/text2.html', callback);
+    $('#text3').load('/html/scene/insText/text3.html', callback);
+    $('#text4').load('/html/scene/insText/text4.html', callback);
+    $('#text5').load('/html/scene/insText/text5.html', callback);
+    $('#text6').load('/html/scene/insText/text6.html', callback);
+    $('#text7').load('/html/scene/insText/text7.html', callback);
 }
 
 function btnPauseClick() {
