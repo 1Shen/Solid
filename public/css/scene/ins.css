@@ -1,0 +1,106 @@
+.ins-body {
+    margin: 0px;
+    margin-right: -60px;
+    height: 94%;
+    overflow-y: scroll;
+}
+
+.ins-body::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 8px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+
+.ins-body::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 40%;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #aaa;
+}
+
+.ins-body::-webkit-scrollbar-track {
+    display: none;
+}
+
+.ins-title {
+    font-size: 28px;
+    color: #444;
+    margin-top: 7px;
+    margin-bottom: 25px;
+}
+
+.ins-content {
+    font-size: 18px;
+    color: #414141;
+    display: flex;
+    flex-direction: column;
+}
+
+.font-sm {
+    font-size: 17px;
+}
+
+.ins-container {
+    margin-left: 12px;
+    margin-bottom: 30px;
+}
+
+.ins-row {
+    display: flex;
+    align-items: center;
+}
+
+.ins-row-left {
+    /* height: 60px; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-right: 6px;
+}
+
+.ins-row-right {
+    /* padding-left: 10px; */
+    width: 443px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ins-row-full {
+    width: 533px;
+}
+
+.blank-footer {
+    width: 100%;
+    height: 100px;
+}
+
+.margin-top-1x {
+    margin-top: 10px;
+}
+
+.margin-bottom-1x {
+    margin-bottom: 18px;
+}
+
+.margin-top-1x {
+    margin-top: 18px;
+}
+
+.margin-bottom-sm {
+    margin-top: 10px;
+}
+
+.neg-margin-left-1x {
+    margin-left: -6px;
+}
+
+.img-border {
+    border: 2px solid rgb(95, 184, 120);
+    border-radius: 10px;
+}
+
+.high {
+    color: red;
+}

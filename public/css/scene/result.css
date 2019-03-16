@@ -1,0 +1,98 @@
+/* 红外光谱 */
+#map-bg {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border: none;
+    width: 100%;
+    height: 700px;
+    z-index: 999;
+    background-color: #666;
+    cursor: auto;
+}
+
+#map-bg .img-box {
+    position: absolute;
+    height: 700px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#map-bg .img-box img {
+    height: 100%;
+}
+
+#map-bg .img-box .fill-box {
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+#map-bg .img-box .fill-box .fill {
+    height: 92%;
+    margin-top: 2%;
+    opacity: 0;
+    z-index: 100;
+}
+
+#map-bg .img-box .fill-box .highlight:hover {
+    opacity: 0.4;
+}
+
+#scanLine {
+    height: 92%;
+    margin-top: 2%;
+    position: absolute;
+    border-left: 1.5px solid red;
+    top: 0%;
+    margin-left: 0px;
+    z-index: 99;
+}
+
+#map-bg .gif {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+}
+
+#map-bg .gif img {
+    height: 100%;
+    width: 100%;
+}
+
+#map-bg .introduce {
+    box-shadow: 0 0 20px 0 rgba(47, 64, 86, 0.2), 0 5px 5px 0 rgba(47, 64, 86, 0.25);
+    position: absolute;
+    width: 327.6px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    font-size: 16.5px;
+    display: none;
+    line-height: 30px;
+}
+
+#map-bg .pageTurnBtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 101;
+    margin-right: 40px;
+    margin-bottom: 54px;
+}
+
+#map-bg .pageTurnBtn .button {
+    padding: 0;
+    width: 90px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    opacity: 0.6;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#map-bg .pageTurnBtn .pageLeft {
+    margin-right: 20px;
+}

@@ -1,0 +1,64 @@
+body {
+    background-color: #e7e7e7;
+}
+
+.layui-form-label {
+    width: 100px;
+}
+
+.layui-input-block {
+    margin-right: 110px;
+}
+
+.layui-input {
+    background-color: rgba(255, 255, 255, .5);
+    color: a
+}
+
+.layui-word-aux {
+    text-indent: 16px;
+}
+
+.btn-blank {
+    margin: 0;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.layui-btn {
+    width: 100px;
+    margin: 0 50px;
+}
+
+.label-right {
+    float: right;
+    text-align: left;
+    margin-top: -40px;
+    
+}
+
+.layui-form-danger+.layui-form-select .layui-input,
+.layui-form-danger:focus {
+    border-color: #5fb878 !important;
+    border-width: 1.5px;
+}
+
+.layui-form {
+    padding-top: 52px;
+    padding-bottom: 32px;
+}
+
+.form-container {
+    background-color: rgb(238, 238, 238);
+    box-shadow: 0 0 20px 0 rgba(47, 64, 86, 0.2), 0 5px 5px 0 rgba(47, 64, 86, 0.25);
+}
+
+.layui-form,
+.btn-blank,
+.layui-input-block,
+.layui-form-label,
+.blank-2x {
+    /* border: 1px red solid; */
+}

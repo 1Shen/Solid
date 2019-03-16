@@ -1,0 +1,90 @@
+#textTip {
+    display: flex;
+    padding: 48px;
+    padding-top: 53px;
+    padding-bottom: 31px;
+    overflow: hidden;
+}
+
+.tip-body {
+    width: 720px;
+    margin-right: -150px;
+    overflow-y: scroll;
+}
+
+/* 容器 */
+.tip-container {
+    width: 600px;
+}
+
+.tip-container .tip-title {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+h3.layui-timeline-title {
+    margin-top: 0;
+}
+
+.layui-timeline-content {
+    font-size: 17.5px;
+    color: #666;
+    margin-left: 5px;
+}
+
+.layui-timeline-content li {
+    margin-left: 6px;
+}
+
+/* 滚动条 */
+.tip-body::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 8px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+
+.tip-body::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 40%;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #aaa;
+}
+
+.tip-body::-webkit-scrollbar-track {
+    display: none;
+}
+
+/* 自定义tooltip */
+.tooltipMsg {
+    z-index: 999;
+    background-color: #393D49;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 200px;
+    display: none;
+    padding: 8px;
+    text-align: center;
+}
+
+.tooltipMsg .title {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.tooltipMsg .content {
+    font-size: 16.5px;
+    color: #eee;
+}
+
+.tooltipMsg::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #393D49 transparent transparent transparent;
+}

@@ -1,0 +1,33 @@
+/* TODO: 得分面板 */
+
+#scorePanel {
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 8%);
+    border-radius: 25px;
+    background-color: #B2DFEE;
+    -webkit-box-shadow: 0px 7px 0 #bbbbbb, 0 8px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 7px 0 rgb(148, 214, 236), 0 8px 3px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    overflow: hidden;
+    padding: 25px;
+}
+
+#scorePanel .scroll-panel {
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+}
+
+#scorePanel .title {
+    font-size: 21px;
+    line-height: 20px;
+    color: #313131;
+    margin-bottom: 25px;
+}
+
+#scorePanel .scroll-panel::-webkit-scrollbar {
+    display: none;
+}

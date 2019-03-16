@@ -1,0 +1,40 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# �������ļ�:04.02.2019 13:11:01
+
+newmtl 08___Default
+	Ns 20.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.7451 0.7451 0.7451
+	Kd 0.7451 0.7451 0.7451
+	Ks 0.0349 0.0349 0.0349
+	Ke 0.0000 0.0000 0.0000
+#	map_Ka C:\Users\WY\Desktop\new\infrared_analyzer_body\��ͼ__3_Gradient.tga
+#	map_Kd C:\Users\WY\Desktop\new\infrared_analyzer_body\��ͼ__3_Gradient.tga
+
+newmtl wire_000000000
+	Ns 32.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.3500 0.3500 0.3500
+	Ke 0.0000 0.0000 0.0000
+
+newmtl 14___Standard
+	Ns 20.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.2392 0.2392 0.2392
+	Kd 0.2392 0.2392 0.2392
+	Ks 0.5400 0.5400 0.5400
+	Ke 0.0000 0.0000 0.0000
