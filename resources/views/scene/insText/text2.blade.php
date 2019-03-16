@@ -9,7 +9,7 @@
             <div class="ins-row neg-margin-left-1x">
 
                 <div class="ins-row-left">
-                    <img class="img-xl" src="../../static/images/instruction/pause.png" alt="">
+                    <img class="img-xl" src="/static/images/instruction/pause.png" alt="">
                 </div>
 
                 <div class="ins-row-right">
@@ -21,7 +21,7 @@
             <div class="ins-row neg-margin-left-1x">
 
                 <div class="ins-row-left">
-                    <img class="img-xl" src="../../static/images/instruction/bulb-off.png" alt="">
+                    <img class="img-xl" src="/static/images/instruction/bulb-off.png" alt="">
                 </div>
 
                 <div class="ins-row-right">
@@ -33,7 +33,7 @@
             <div class="ins-row neg-margin-left-1x">
 
                 <div class="ins-row-left">
-                    <img class="img-xl" src="../../static/images/instruction/bulb-on.png" alt="">
+                    <img class="img-xl" src="/static/images/instruction/bulb-on.png" alt="">
                 </div>
 
                 <div class="ins-row-right">
@@ -45,7 +45,7 @@
             <div class="ins-row neg-margin-left-1x">
 
                 <div class="ins-row-left">
-                    <img class="img-xl" src="../../static/images/instruction/magnifier.png" alt="">
+                    <img class="img-xl" src="/static/images/instruction/magnifier.png" alt="">
                 </div>
 
                 <div class="ins-row-right">
@@ -67,7 +67,7 @@
             <div class="ins-row margin-bottom-sm">
 
                 <div class="ins-row-left">
-                    <img class="img-s" src="../../static/images/instruction/spop-info.png" alt="">
+                    <img class="img-s" src="/static/images/instruction/spop-info.png" alt="">
                 </div>
 
                 <div class="ins-row-right">
@@ -79,7 +79,7 @@
             <div class="ins-row margin-bottom-sm">
 
                 <div class="ins-row-left">
-                    <img class="img-s" src="../../static/images/instruction/spop-misson.png" alt="">
+                    <img class="img-s" src="/static/images/instruction/spop-misson.png" alt="">
                 </div>
 
                 <div class="ins-row-right">
@@ -91,7 +91,7 @@
             <div class="ins-row margin-bottom-sm">
 
                 <div class="ins-row-left">
-                    <img class="img-s" src="../../static/images/instruction/spop-complete.png" alt="">
+                    <img class="img-s" src="/static/images/instruction/spop-complete.png" alt="">
                 </div>
 
                 <div class="ins-row-right">
@@ -103,7 +103,7 @@
             <div class="ins-row margin-bottom-sm">
 
                 <div class="ins-row-left">
-                    <img class="img-s" src="../../static/images/instruction/spop-error.png" alt="">
+                    <img class="img-s" src="/static/images/instruction/spop-error.png" alt="">
                 </div>
 
                 <div class="ins-row-right">

@@ -27,7 +27,7 @@
             <div class="ins-row margin-bottom-sm">
 
                 <div class="ins-row-left">
-                    <img class="img-m" src="../../static/images/instruction/left.jpg" style="border-radius: 45%">
+                    <img class="img-m" src="/static/images/instruction/left.jpg" style="border-radius: 45%">
                 </div>
 
                 <div class="ins-row-right">
@@ -39,7 +39,7 @@
             <div class="ins-row margin-bottom-sm">
 
                 <div class="ins-row-left">
-                    <img class="img-m" src="../../static/images/instruction/right.jpg" style="border-radius: 45%">
+                    <img class="img-m" src="/static/images/instruction/right.jpg" style="border-radius: 45%">
                 </div>
 
                 <div class="ins-row-right">
@@ -51,7 +51,7 @@
             <div class="ins-row margin-bottom-sm">
 
                 <div class="ins-row-left">
-                    <img class="img-m" src="../../static/images/instruction/middle.jpg" style="border-radius: 45%">
+                    <img class="img-m" src="/static/images/instruction/middle.jpg" style="border-radius: 45%">
                 </div>
 
                 <div class="ins-row-right">

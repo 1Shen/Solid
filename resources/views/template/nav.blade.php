@@ -3,16 +3,16 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-left">
-                <a href="../home/index.html">
+                <a href="{{ url('/') }}">
                     <li class="navbar-brand">虚拟仿真实验</li>
                 </a>
-                <li id="index-nav" class="nav-item"><a href="../home/index.html">主页</a></li>
-                <li id="learn-nav" class="nav-item"><a href="../home/learn.html">课程</a></li>
+                <li id="index-nav" class="nav-item"><a href="{{ url('/') }}">主页</a></li>
+                <li id="learn-nav" class="nav-item"><a href="{{ url('learn') }}">课程</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li id="login-nav" class="nav-item"><a href="../home/login.html">登录</a></li>
-                <li id="register-nav" class="nav-item"><a href="../home/register.html">注册</a></li>
+                <li id="login-nav" class="nav-item"><a href="{{ url('login') }}">登录</a></li>
+                <li id="register-nav" class="nav-item"><a href="{{ url('register') }}">注册</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
-</nav>
+</nav> 

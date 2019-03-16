@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <title>register</title>
     <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
-    <script src="../../js/commons.js"></script>
-    <script src="../../js/home/register.js"></script>
-    <link rel="stylesheet" href="../../css/home/register.css">
+    <script src="/js/commons.js"></script>
+    <script src="/js/home/register.js"></script>
+    <link rel="stylesheet" href="/css/home/register.css">
 </head>
 
 <body ng-app="">
-    <div id="header"></div>
+    @include('template.nav')
 
     <div id="main">
         <div class="blank-2x"></div>
@@ -19,7 +19,7 @@
             <div class="row">
 
                 <div class="col-md-2"></div>
-                
+
                 <div class="form-container col-md-8 edge">
                     <form class="layui-form" action="">
 
@@ -27,8 +27,7 @@
                             <label class="layui-form-label">用户名</label>
 
                             <div class="layui-input-block">
-                                <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名"
-                                    autocomplete="off" class="layui-input layui-form-danger">
+                                <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input layui-form-danger">
                             </div>
 
                             <label class="layui-form-label label-right"></label>
@@ -39,8 +38,7 @@
                             <label class="layui-form-label">密码</label>
 
                             <div class="layui-input-block">
-                                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
-                                    autocomplete="off" class="layui-input layui-form-danger">
+                                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input layui-form-danger">
                             </div>
 
                             <label class="layui-form-label label-right"></label>
@@ -51,8 +49,7 @@
                             <label class="layui-form-label">确认密码</label>
 
                             <div class="layui-input-block">
-                                <input type="password" name="password" required lay-verify="required" placeholder="请再次输入密码"
-                                    autocomplete="off" class="layui-input layui-form-danger">
+                                <input type="password" name="password" required lay-verify="required" placeholder="请再次输入密码" autocomplete="off" class="layui-input layui-form-danger">
                             </div>
 
                             <label class="layui-form-label label-right"></label>
@@ -63,8 +60,7 @@
                             <label class="layui-form-label">邮箱</label>
 
                             <div class="layui-input-block">
-                                <input type="text" name="title" required lay-verify="required" placeholder="请输入邮箱"
-                                    autocomplete="off" class="layui-input layui-form-danger">
+                                <input type="text" name="title" required lay-verify="required" placeholder="请输入邮箱" autocomplete="off" class="layui-input layui-form-danger">
                             </div>
 
                             <label class="layui-form-label label-right"></label>
@@ -100,23 +96,20 @@
         </div>
     </div>
 
-    <div id="footer" class="edge"></div>
+    @include('template.footer')
 </body>
 
 <script>
-    $(function () {
-        $('#header').load('../../html/template/nav.html', function () {
-            $('#register-nav').addClass('nav-active');
-            navbarBind();
-        });
-        $('#footer').load('../../html/template/footer.html');
+    $(function() {
+        $('#register-nav').addClass('nav-active');
+        navbarBind();
 
         //Demo
-        layui.use('form', function () {
+        layui.use('form', function() {
             var form = layui.form;
 
             //监听提交
-            form.on('submit(formDemo)', function (data) {
+            form.on('submit(formDemo)', function(data) {
                 layer.msg(JSON.stringify(data.field));
                 return false;
             });
@@ -124,4 +117,4 @@
     });
 </script>
 
-</html>
+</html> 

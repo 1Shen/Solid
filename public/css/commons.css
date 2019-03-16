@@ -121,6 +121,7 @@ body::-webkit-scrollbar {
     color: #fff;
     font-size: 15px;
     letter-spacing: 3px;
+    margin-bottom: 0
 }
 
 .navbar-cyan .navbar-nav>li>a {
@@ -185,7 +186,6 @@ body::-webkit-scrollbar {
     transition: all 1s;
 }
 
-
 /* footer */
 .footer {
     bottom: 0;
@@ -195,9 +195,6 @@ body::-webkit-scrollbar {
 }
 
 /* header, footer, main */
-#header {
-    /* min-height: 60px; */
-}
 
 #main {
     min-height: 630px;
@@ -205,12 +202,6 @@ body::-webkit-scrollbar {
 
 #footer {
     min-height: 60px;
-}
-
-#header,
-#main,
-#footer {
-    /* border: solid 1px red; */
 }
 
 #footer {

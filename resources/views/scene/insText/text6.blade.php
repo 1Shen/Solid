@@ -9,7 +9,7 @@
             <div class="ins-row margin-bottom-sm">
 
                 <div class="ins-row-left">
-                    <img class="img-xxl" src="../../../static/images/instruction/press.png" alt="">
+                    <img class="img-xxl" src="/static/images/instruction/press.png" alt="">
                 </div>
 
                 <div class="ins-row-right">
@@ -21,7 +21,7 @@
             <div class="ins-row margin-bottom-sm">
 
                 <div class="ins-row-left">
-                    <img class="img-xxl" src="../../static/images/instruction/screw_top.png" alt="">
+                    <img class="img-xxl" src="/static/images/instruction/screw_top.png" alt="">
                 </div>
 
                 <div class="ins-row-right">
@@ -33,7 +33,7 @@
             <div class="ins-row margin-bottom-sm">
                 
                 <div class="ins-row-left">
-                    <img class="img-xxl" src="../../static/images/instruction/screw_front.png" alt="">
+                    <img class="img-xxl" src="/static/images/instruction/screw_front.png" alt="">
                 </div>
 
                 <div class="ins-row-right">
@@ -45,7 +45,7 @@
             <div class="ins-row margin-bottom-sm">
 
                 <div class="ins-row-left">
-                    <img class="img-xxl" src="../../static/images/instruction/clock.png" alt="">
+                    <img class="img-xxl" src="/static/images/instruction/clock.png" alt="">
                 </div>
 
                 <div class="ins-row-right">

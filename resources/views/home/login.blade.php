@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>login</title>
-    <script src="../../js/commons.js"></script>
+    <script src="/js/commons.js"></script>
 
     <!-- bg-bubbles -->
-    <link rel="stylesheet" href="../../css/home/bg-bubbles/normalize.css">
-    <link rel="stylesheet" href="../../css/home/bg-bubbles/default.css">
-    <link rel="stylesheet" href="../../css/home/bg-bubbles/styles.css">
+    <link rel="stylesheet" href="/css/home/bg-bubbles/normalize.css">
+    <link rel="stylesheet" href="/css/home/bg-bubbles/default.css">
+    <link rel="stylesheet" href="/css/home/bg-bubbles/styles.css">
 
     <!-- login-frame -->
-    <link rel="stylesheet" type="text/css" href="../../css/home/login-frame/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/home/login-frame/default.css">
-    <link rel="stylesheet" type="text/css" href="../../css/home/login-frame/styles.css">
-    <script src='../../js/home/stopExecutionOnTimeout.js?t=1'></script>
-    <script src='../../lib/JQuery/js/jquery-1.11.0.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="/css/home/login-frame/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/css/home/login-frame/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/home/login-frame/styles.css">
+    <script src='/js/home/stopExecutionOnTimeout.js?t=1'></script>
+    <script src='/lib/JQuery/js/jquery-1.11.0.min.js'></script>
 
-    <link rel="stylesheet" href="../../css/home/login.css">
-    <script src="../../js/home/login.js"></script>
+    <link rel="stylesheet" href="/css/home/login.css">
+    <script src="/js/home/login.js"></script>
+
+    <title>登录</title>
+
 </head>
 
 <body ng-app="">
@@ -49,10 +51,10 @@
     <div class="demo narrow">
         <div class="login">
             <div class="fzu-icon">
-                <img src="../../static/images/icon/fzu-icon.png" alt="">
+                <img src="/static/images/icon/fzu-icon.png" alt="">
             </div>
 
-            <div class="login__form">
+            <form class="login__form" action="">
                 <div class="login__row">
                     <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
                         <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
@@ -66,8 +68,8 @@
                     <input type="password" class="login__input pass" placeholder="Password" />
                 </div>
                 <button type="button" class="login__submit">登 录</button>
-                <p class="login__signup">还没有账号? &nbsp;<a href="../home/register.html" target="_blank">立刻注册</a></p>
-            </div>
+                <p class="login__signup">还没有账号? &nbsp;<a href="{{ url('register') }}" target="_blank">立刻注册</a></p>
+            </form>
         </div>
         <!-- <div class="app" style="border: 1px red solid;">
             <div class="app__logout">

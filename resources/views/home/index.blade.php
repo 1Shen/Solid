@@ -1,16 +1,17 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>虚拟仿真实验</title>
     <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
-    <script src="../../js/commons.js"></script>
-    <script src="../../js/home/index.js"></script>
-    <link rel="stylesheet" href="../../css/home/index.css">
+    <script src="/js/commons.js"></script>
+    <script src="/js/home/index.js"></script>
+    <link rel="stylesheet" href="/css/home/index.css">
+
+    <title>虚拟仿真实验</title>
 </head>
 
 <body ng-app="">
-    <div id="header"></div>
+    @include('template.nav')
 
     <div id="main">
         <div id="banner" class="container-fluid">
@@ -20,8 +21,8 @@
                     <p>红外光谱反映的是分子的振动情况。当用一定频率的红外光照射某物质分子时，分子间的振动能产生偶极矩周期性变化。</p>
                     <p>本实验旨在让学生通过虚拟仿真实验练习，掌握红外光谱仪的一些基本操作以及红外光谱测定的样品制备方法，熟悉如何由红外光谱鉴别官能团并根据官能团确定未知组分的主要结构。</p>
                 </div>
-                <a class="layui-btn layui-btn-lg" href="../../html/scene/scene.html">开始实验</a>
-                <a class="layui-btn layui-btn-lg margin-left-2x" href="learn.html">先去学习</a>
+                <a class="layui-btn layui-btn-lg" href="{{ url('game') }}">开始实验</a>
+                <a class="layui-btn layui-btn-lg margin-left-2x" href="{{ url('learn') }}">先去学习</a>
             </div>
         </div>
         <div id="content" class="container">
@@ -47,7 +48,7 @@
                                 <div class="subcontent">
                                     <p>正己烷，是低毒、有微弱的特殊气味的无色液体。正己烷是一种化学溶剂，主要用于丙烯等烯烃聚合时的溶剂、食用植物油的提取剂、橡胶和涂料的溶剂以及颜料的稀释剂，具有一定的毒性，会通过呼吸道、皮肤等途径进入人体，长期接触可导致人体出现头痛、头晕、乏力、四肢麻木等慢性中毒症状，严重的可导致晕倒、神志丧失、癌症甚至死亡。</p>
                                     <div class="content-img">
-                                        <img src="../../static/images/img/hexane.jpg" alt="">
+                                        <img src="/static/images/img/hexane.jpg" alt="">
                                     </div>
                                 </div>
 
@@ -56,7 +57,7 @@
                                     <p>溴化钾（Potassium bromide），化学式为KBr，相对分子质量为119.00。</p>
                                     <p>无色结晶或白色粉末，有强烈咸味，见光色变黄。稍有吸湿性。1g溶于1.5ml水，水溶液呈中性。相对密度为2.75。熔点730℃。沸点1435℃。有刺激性。主要用于光谱分析，点滴分析测定铜及银，极谱分析铟、镉和砷，显影剂。</p>
                                     <div class="content-img">
-                                        <img src="../../static/images/img/hexane.jpg" alt="">
+                                        <img src="/static/images/img/hexane.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +72,7 @@
                                 <div class="subcontent">
                                     <p>光源发出的光被分束器（类似半透半反镜）分为两束，一束经反射到达动镜，另一束经透射到达定镜。两束光分别经定镜和动镜反射再回到分束器，动镜以一恒定速度作直线运动，因而经分束器分束后的两束光形成光程差，产生干涉。干涉光在分束器会合后通过样品池，通过样品后含有样品信息的干涉光到达检测器，然后通过傅里叶变换对信号进行处理，最终得到透过率或吸光度随波数或波长的红外吸收光谱图。</p>
                                     <div class="content-img">
-                                        <img src="../../static/images/img/analyzer.png" alt="">
+                                        <img src="/static/images/img/analyzer.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -98,7 +99,7 @@
                     <div class="sidebar">
                         <div class="title">教师简介</div>
                         <div class="avatar">
-                            <img src="../../static/images/avatar.jpg" alt="">
+                            <img src="/static/images/avatar.jpg" alt="">
                         </div>
                         <br>
                         <br>
@@ -124,26 +125,23 @@
         <div class="blank-2x"></div>
     </div>
 
-    <div id="footer" class="edge"></div>
+    @include('template.footer')
 </body>
 
 <script>
-    $(function () {
-        $('#header').load('../../html/template/nav.html', function () {
-            $('#index-nav').addClass('nav-active');
-            navbarBind();
-        });
-        $('#footer').load('../../html/template/footer.html');
+    $(function() {
+        $('#index-nav').addClass('nav-active');
+        navbarBind();
 
-        layui.use('element', function () {
+        layui.use('element', function() {
             var element = layui.element;
 
             //一些事件监听
-            element.on('tab(demo)', function (data) {
+            element.on('tab(demo)', function(data) {
                 console.log(data);
             });
         });
     })
 </script>
 
-</html>
+</html> 

@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>虚拟仿真实验——固体红外光谱的测试与分析</title>
     <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
-    <script src="../../js/commons.js"></script>
-    <script src="../../js/home/learn.js"></script>
-    <link rel="stylesheet" href="../../css/home/learn.css">
+    <script src="/js/commons.js"></script>
+    <script src="/js/home/learn.js"></script>
+    <link rel="stylesheet" href="/css/home/learn.css">
 
-    <link rel="stylesheet" href="../../lib/ckin/dist/css/ckin.css">
+    <link rel="stylesheet" href="/lib/ckin/dist/css/ckin.css">
+
+    <title>虚拟仿真实验——固体红外光谱的测试与分析</title>
+
 </head>
 
 <body ng-app="">
-    <div id="header"></div>
+    @include('template.nav')
 
     <div id="main">
         <div class="blank-3x"></div>
@@ -105,41 +107,38 @@
                     </ul>
                 </div>
                 <div id="video1" class="video-container col-md-9">
-                    <video src="../../static/videos/step1.mp4" data-ckin="default" data-overlay="2" data-title="固体红外光谱的测试与分析"></video>
+                    <video src="/static/videos/step1.mp4" data-ckin="default" data-overlay="2" data-title="固体红外光谱的测试与分析"></video>
                 </div>
                 <div id="video2" class="video-container col-md-9" style="display:none">
-                    <video src="../../static/videos/step2.mp4" data-ckin="default" data-overlay="2" data-title="固体红外光谱的测试与分析"></video>
+                    <video src="/static/videos/step2.mp4" data-ckin="default" data-overlay="2" data-title="固体红外光谱的测试与分析"></video>
                 </div>
                 <div id="video3" class="video-container col-md-9" style="display:none">
-                    <video src="../../static/videos/step3.mp4" data-ckin="default" data-overlay="2" data-title="固体红外光谱的测试与分析"></video>
+                    <video src="/static/videos/step3.mp4" data-ckin="default" data-overlay="2" data-title="固体红外光谱的测试与分析"></video>
                 </div>
                 <div id="video4" class="video-container col-md-9" style="display:none">
-                    <video src="../../static/videos/step4.mp4" data-ckin="default" data-overlay="2" data-title="固体红外光谱的测试与分析"></video>
+                    <video src="/static/videos/step4.mp4" data-ckin="default" data-overlay="2" data-title="固体红外光谱的测试与分析"></video>
                 </div>
                 <div id="video5" class="video-container col-md-9">
-                    <a href="../../html/scene/scene.html" class="layui-btn">开始实验</a>
+                    <a href="{{ url('game') }}" class="layui-btn">开始实验</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="footer"></div>
+    @include('template.footer')
 </body>
 
 <!-- script -->
-<script src="../../lib/ckin/dist/js/ckin.js"></script>
+<script src="/lib/ckin/dist/js/ckin.js"></script>
 <script>
-    $(function () {
-        $('#header').load('../../html/template/nav.html', function () {
-            $('#learn-nav').addClass('nav-active');
-            navbarBind();
-        });
-        $('#footer').load('../../html/template/footer.html');
+    $(function() {
+        $('#learn-nav').addClass('nav-active');
+        navbarBind();
 
-        layui.use('element', function () {
+        layui.use('element', function() {
             var element = layui.element;
         });
     });
 </script>
 
-</html>
+</html> 

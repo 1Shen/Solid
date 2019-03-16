@@ -9,7 +9,7 @@
             <div class="ins-row">
 
                 <div>
-                    <img class="img-xxl" src="../../static/images/instruction/beaker.png" alt="">
+                    <img class="img-xxl" src="/static/images/instruction/beaker.png" alt="">
                 </div>
 
                 <div class="ins-row-right">
@@ -32,7 +32,7 @@
             <div class="ins-row">
                 
                 <div>
-                    <img class="img-xxl" src="../../static/images/instruction/spoon.png" alt="">
+                    <img class="img-xxl" src="/static/images/instruction/spoon.png" alt="">
                 </div>
     
                 <div class="ins-row-right">

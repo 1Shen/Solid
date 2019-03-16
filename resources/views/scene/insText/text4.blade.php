@@ -9,7 +9,7 @@
             <div class="ins-row">
 
                 <div>
-                    <img class="img-xxl" src="../../static/images/instruction/agate_mortar.png" alt="">
+                    <img class="img-xxl" src="/static/images/instruction/agate_mortar.png" alt="">
                 </div>
 
                 <div class="ins-row-right">
@@ -31,7 +31,7 @@
             <div class="ins-row">
 
                 <div>
-                    <img class="img-xxl" src="../../static/images/instruction/agate_pestle.png" alt="">
+                    <img class="img-xxl" src="/static/images/instruction/agate_pestle.png" alt="">
                 </div>
 
                 <div class="ins-row-right">

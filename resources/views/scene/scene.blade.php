@@ -5,38 +5,38 @@
     <title>3d实验场景</title>
 
     <!-- 引入公共头部 -->
-    <script src="../../js/commons.js"></script>
+    <script src="/js/commons.js"></script>
 
     <!-- css -->
-    <link rel="stylesheet" href="../../css/scene/scene.css">
-    <link rel="stylesheet" href="../../css/scene/ins.css">
-    <link rel="stylesheet" href="../../css/scene/tip.css">
-    <link rel="stylesheet" href="../../css/scene/result.css">
-    <link rel="stylesheet" href="../../css/scene/score.css">
+    <link rel="stylesheet" href="/css/scene/scene.css">
+    <link rel="stylesheet" href="/css/scene/ins.css">
+    <link rel="stylesheet" href="/css/scene/tip.css">
+    <link rel="stylesheet" href="/css/scene/result.css">
+    <link rel="stylesheet" href="/css/scene/score.css">
 
     <!-- ThreeJS lib -->
-    <script src='../../lib/ThreeJS/three.js'></script>
-    <script src='../../lib/ThreeJS/Stats.js'></script>
-    <script src="../../lib/ThreeJS/tween.min.js"></script>
-    <script src='../../lib/ThreeJS/controls/OrbitControls.js'></script>
-    <script src="../../lib/ThreeJS/controls/DragControls.js"></script>
-    <script src='../../lib/ThreeJS/loaders/MTLLoader.js'></script>
-    <script src='../../lib/ThreeJS/loaders/OBJLoader.js'></script>
-    <script src='../../lib/ThreeJS/loaders/TGALoader.js'></script>
+    <script src='/lib/ThreeJS/three.js'></script>
+    <script src='/lib/ThreeJS/Stats.js'></script>
+    <script src="/lib/ThreeJS/tween.min.js"></script>
+    <script src='/lib/ThreeJS/controls/OrbitControls.js'></script>
+    <script src="/lib/ThreeJS/controls/DragControls.js"></script>
+    <script src='/lib/ThreeJS/loaders/MTLLoader.js'></script>
+    <script src='/lib/ThreeJS/loaders/OBJLoader.js'></script>
+    <script src='/lib/ThreeJS/loaders/TGALoader.js'></script>
     <!-- js -->
-    <script src="../../js/scene/global.js"></script>
-    <script src="../../js/scene/utils.js"></script>
-    <script src="../../js/scene/initScene.js"></script>
-    <script src="../../js/scene/initMenu.js"></script>
-    <script src="../../js/scene/initObject.js"></script>
-    <script src="../../js/scene/render.js"></script>
-    <script src="../../js/scene/mouseEvent.js"></script>
-    <script src="../../js/scene/animation.js"></script>
-    <script src="../../js/scene/GUI.js"></script>
-    <script src="../../js/scene/game.js"></script>
-    <script src="../../js/scene/result.js"></script>
-    <script src="../../js/scene/sound.js"></script>
-    <script src="../../js/scene/mission.js"></script>
+    <script src="/js/scene/global.js"></script>
+    <script src="/js/scene/utils.js"></script>
+    <script src="/js/scene/initScene.js"></script>
+    <script src="/js/scene/initMenu.js"></script>
+    <script src="/js/scene/initObject.js"></script>
+    <script src="/js/scene/render.js"></script>
+    <script src="/js/scene/mouseEvent.js"></script>
+    <script src="/js/scene/animation.js"></script>
+    <script src="/js/scene/GUI.js"></script>
+    <script src="/js/scene/game.js"></script>
+    <script src="/js/scene/result.js"></script>
+    <script src="/js/scene/sound.js"></script>
+    <script src="/js/scene/mission.js"></script>
     <!-- 遮罩层插件 -->
     <link href="https://cdn.jsdelivr.net/npm/busy-load/dist/app.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/busy-load/dist/app.min.js"></script>
@@ -57,7 +57,7 @@
     <!-- 红外光谱背景 -->
     <div id="map-bg" class="narrow">
         <div class="img-box">
-            <img class="bg" src="../../static/images/bg/new/0_0.png" alt="">
+            <img class="bg" src="/static/images/bg/new/0_0.png" alt="">
             <div class="fill-box">
 
                 <!-- 原始位置 position: absolute; 无display -->
@@ -119,7 +119,7 @@
     </div>
 
     <div id="arrow_upon_item">
-        <img src="../../static/images/icon/arrow.png" alt="">
+        <img src="/static/images/icon/arrow.png" alt="">
     </div>
 
     <!-- itemBar -->
@@ -178,26 +178,26 @@
     <div id="textIns" style="display:none">
         <div class="tab">
             <div class="title" data-text="text1" data-placement="left" title="操作">
-                <img class="img-m" src="../../static/images/instruction/keyboard.png" alt="">
+                <img class="img-m" src="/static/images/instruction/keyboard.png" alt="">
                 <!-- <i class="fa fa-gamepad" aria-hidden="true"></i> -->
             </div>
             <div class="title" data-text="text2" data-placement="left" title="界面">
-                <img class="img-l" src="../../static/images/instruction/spop.png" alt="">
+                <img class="img-l" src="/static/images/instruction/spop.png" alt="">
             </div>
             <div class="title" data-text="text3" data-placement="left" title="烧杯和药匙">
-                <img src="../../static/images/instruction/beaker_spoon.png" alt="">
+                <img src="/static/images/instruction/beaker_spoon.png" alt="">
             </div>
             <div class="title" data-text="text4" data-placement="left" title="研钵和钵杵">
-                <img src="../../static/images/instruction/mortar_pestle.png" alt="">
+                <img src="/static/images/instruction/mortar_pestle.png" alt="">
             </div>
             <div class="title" data-text="text5" data-placement="left" title="压模">
-                <img src="../../static/images/instruction/stamper.png" alt="">
+                <img src="/static/images/instruction/stamper.png" alt="">
             </div>
             <div class="title" data-text="text6" data-placement="left" title="压力机">
-                <img src="../../static/images/instruction/press.png" alt="">
+                <img src="/static/images/instruction/press.png" alt="">
             </div>
             <div class="title fixed active" data-text="text7" data-placement="left" title="游戏说明">
-                <img class="img-m" src="../../static/images/instruction/trophy.png" alt="">
+                <img class="img-m" src="/static/images/instruction/trophy.png" alt="">
                 <!-- <i style="color: #FFB90F;" class="fa fa-trophy" aria-hidden="true"></i> -->
             </div>
 

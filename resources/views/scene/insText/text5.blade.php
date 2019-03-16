@@ -9,7 +9,7 @@
             <div class="ins-row margin-bottom-sm">
                 
                 <div class="ins-row-left">
-                    <img class="img-xxl" src="../../static/images/instruction/stamper.png" alt="">
+                    <img class="img-xxl" src="/static/images/instruction/stamper.png" alt="">
                 </div>
 
                 <div class="ins-row-right">
@@ -21,7 +21,7 @@
             <div class="ins-row margin-bottom-sm">
                 
                 <div class="ins-row-left">
-                    <img class="img-xl img-border" src="../../static/images/instruction/stamper_top.png" alt="">  
+                    <img class="img-xl img-border" src="/static/images/instruction/stamper_top.png" alt="">  
                 </div>
 
                 <div class="ins-row-right">
@@ -33,8 +33,8 @@
             <div class="ins-row margin-bottom-sm">
                 
                 <div class="ins-row-left">
-                    <img class="img-xl img-border" src="../../static/images/instruction/empty-stamper_middle.png" alt="">
-                    <img class="img-xl img-border margin-left-1x" src="../../../static/images/instruction/sth-stamper_middle.png" alt="">
+                    <img class="img-xl img-border" src="/static/images/instruction/empty-stamper_middle.png" alt="">
+                    <img class="img-xl img-border margin-left-1x" src="/static/images/instruction/sth-stamper_middle.png" alt="">
                 </div>
 
                 <div class="ins-row-right">
@@ -46,7 +46,7 @@
             <div class="ins-row margin-bottom-sm">
                 
                 <div class="ins-row-left">
-                    <img class="img-xl img-border" src="../../static/images/instruction/stamper_bottom.png" alt="">  
+                    <img class="img-xl img-border" src="/static/images/instruction/stamper_bottom.png" alt="">  
                 </div>
 
                 <div class="ins-row-right">

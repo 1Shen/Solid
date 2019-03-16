@@ -16,6 +16,14 @@ Route::get('/', function () {
     return view('home.index');
 });
 
+Route::get('login', 'UserController@index');
+
 Route::get('game', 'GameController@index');
 
-Route::get('login', 'UserController@index');
+Route::get('learn', function () {
+    return view('home.learn');
+});
+
+Route::get('register', function () {
+    return view('home.register');
+});
