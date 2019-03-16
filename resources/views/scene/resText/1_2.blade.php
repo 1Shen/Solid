@@ -1,4 +1,0 @@
-<div class="text" data-top="56%" data-left="25%" data-img-top="33%" data-img-left="26%">
-    在2926cm<sup>-1</sup>处，是CH<SUB>2</SUB>>的不对称伸缩振动峰
-    ，一般在2926±10cm<sup>-1</sup>范围内。
-</div>
