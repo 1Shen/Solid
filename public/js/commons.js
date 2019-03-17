@@ -19,8 +19,8 @@ document.writeln("<link rel=\'stylesheet\' href=\'../../lib/toast/css/animate.cs
 document.writeln("<script src=\'../../lib/toast/js/toast.js\'></script>");
 document.writeln("<link rel=\'stylesheet\' href=\'../../lib/toast/css/toast.css\'>");
 
-// font awesome
-document.writeln("<link href=\'../../lib/font-awesome-4.7.0/css/font-awesome.min.css\' rel=\'stylesheet\'>");
+// font-awesome
+document.writeln("<link href=\'../../lib/font-awesome/css/font-awesome.min.css\' rel=\'stylesheet\'>");
 
 // buttons
 document.writeln("<link href=\'../../lib/Buttons/css/buttons.css\' rel=\'stylesheet\'>");
@@ -42,8 +42,8 @@ document.writeln("<link rel=\'stylesheet\' href=\'../../lib/layui/css/layui.css\
 document.writeln("<script src=\'../../lib/layui/layui.js\'></script>");
 
 // bootstrap
-document.writeln("<link href=\'../../lib/bootstrap-3.3.7-dist/css/bootstrap.min.css\' rel=\'stylesheet\'>");
-document.writeln("<script src=\'../../lib/bootstrap-3.3.7-dist/js/bootstrap.min.js\'></script>");
+document.writeln("<link href=\'../../lib/bootstrap/bootstrap.min.css\' rel=\'stylesheet\'>");
+document.writeln("<script src=\'../../lib/bootstrap/bootstrap.min.js\'></script>");
 
 // 自己写的
 document.writeln("<link rel=\'stylesheet\' href=\'../../css/commons.css\'>");

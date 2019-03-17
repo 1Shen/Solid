@@ -41,7 +41,7 @@ var mission = [{
 
 // 游戏引导
 var guide_step = 0;
-const toast_time = 4000;
+const toast_time = 10000;
 const guide = [{
         done: false,
         do: function (itemName) {
@@ -54,7 +54,7 @@ const guide = [{
 
                 animation['2D_arrow'].play('25%', '475px');
 
-                showMessage("选择刚刚拿到的【药匙】", toast_time);
+                showMessage("选择刚刚拿到的 [ <span class='toast-high'>药匙</span> ]", toast_time);
 
                 console.log(guide_step)
             }
@@ -75,7 +75,7 @@ const guide = [{
 
                 animation['3D_arrow'].play(model.position.x, model.position.y + 50, model.position.z);
 
-                showMessage("从烧杯中取一匙【样品粉末】", toast_time);
+                showMessage("从烧杯中取一匙 [ <span class='toast-high'>样品粉末</span> ]", toast_time);
 
                 console.log(guide_step)
             }
@@ -135,7 +135,7 @@ const guide = [{
 
                 swal({
                     title: '你已完成实验引导',
-                    text: "接下来开始做实验吧！<br>Tips: <b class='high'>操作说明</b>真的很有用",
+                    text: "接下来开始做实验吧！<br>小提示：开始游戏前请仔细阅读<span class='high'>操作说明</span>",
                     type: 'success',
                     confirmButtonColor: '#3085d6',
                     confirmButtonText: '好的',

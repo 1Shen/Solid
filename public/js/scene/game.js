@@ -23,6 +23,7 @@ const property = {
         needKBr: 4, //reset 4
         pickable: true,
         menuEnable: true,
+        menuName: 'agate_mortar',
         tooltipTitle: "玛瑙研钵",
         tooltipContent: "右键：清空"
     },
@@ -64,7 +65,7 @@ const property = {
         pickable: true,
         animation: animation['spoon_fetch'],
         tooltipTitle: "药匙",
-        tooltipContent: "用于取烧杯中的药品"
+        tooltipContent: "用于取药品"
     },
 
     // 压模底部
@@ -100,7 +101,7 @@ const property = {
         needFix: 2,
         needPress: 2, //reset 2
         tooltipTitle: "压力机主体",
-        tooltipContent: "左键：放置or取出压模"
+        tooltipContent: "用于放置压模"
     },
 
     // 固定旋钮
@@ -109,7 +110,7 @@ const property = {
         count: 2, //reset 2
         maxCount: 5,
         tooltipTitle: "固定旋钮",
-        tooltipContent: "右键：拧紧or松开"
+        tooltipContent: "右键：调节松紧程度"
     },
 
     // 压力旋钮
@@ -118,7 +119,7 @@ const property = {
         count: 0,
         maxCount: 5, //reset 5
         tooltipTitle: "压力旋钮",
-        tooltipContent: "右键：加压or减压"
+        tooltipContent: "右键：调节压力值"
     },
 
     // 红外分析仪
@@ -139,6 +140,12 @@ const property = {
     'stamper': {
         tooltipTitle: "组装好的压模",
         tooltipContent: "同步拾取，同步放置"
+    },
+
+    // 电脑
+    'computer': {
+        tooltipTitle: "电脑",
+        tooltipContent: "左键：查看分析结果"
     }
 };
 

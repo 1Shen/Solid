@@ -153,9 +153,9 @@
   position: relative;
   min-height: 20px;
   line-height: 1.25;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 29px;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -163,7 +163,7 @@
 @media screen and (min-width: 30em) {
   .spop {
     border-radius: 2px;
-    width: 265px;
+    max-width: 290px;
     margin: 0.7em;
   }
 }
@@ -264,7 +264,7 @@
 
 .spop-body {
   padding: 0.8em;
-  padding-right: 1.4em;
+  padding-right: 2.1em;
 }
 
 .spop-body p {

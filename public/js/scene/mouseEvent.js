@@ -165,14 +165,14 @@ function mouseEvent(event) {
             pickItem(HIGHLIGHT);
 
         } else if (HIGHLIGHT && HIGHLIGHT.trigger) {
-            
+
             // 再判断场景模型是否可触发
             HIGHLIGHT.trigger(event);
 
             sound['mouseClick'].play();
 
         } else if (HIGHLIGHT.entirety && HIGHLIGHT.entirety.pickable) {
-            
+
             pickItem(HIGHLIGHT.entirety);
 
         } else {
@@ -196,7 +196,16 @@ function showItemMenu(event, item = HIGHLIGHT) {
 
     if (!item.menuEnable) return;
 
+    if (item.menuName) {
+        $('#' + item.menuName + '_menu').contextMenu({
+            x: event.clientX,
+            y: event.clientY
+        });
+        return;
+    }
+
     if ($('#' + item.name + '_menu').length > 0) {
+
         $('#' + item.name + '_menu').contextMenu({
             x: event.clientX,
             y: event.clientY

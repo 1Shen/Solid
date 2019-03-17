@@ -28,7 +28,7 @@ h3.layui-timeline-title {
 
 .layui-timeline-content {
     font-size: 17.5px;
-    color: #666;
+    color: #5e5e5e;
     margin-left: 5px;
 }
 
@@ -69,13 +69,14 @@ h3.layui-timeline-title {
 }
 
 .tooltipMsg .title {
-    font-size: 20px;
+    font-size: 21px;
     margin-bottom: 3px;
+    color: #fff;
 }
 
 .tooltipMsg .content {
-    font-size: 16.5px;
-    color: #eee;
+    font-size: 17.2px;
+    color: #ffe000;
 }
 
 .tooltipMsg::after {
@@ -87,4 +88,14 @@ h3.layui-timeline-title {
     border-width: 10px;
     border-style: solid;
     border-color: #393D49 transparent transparent transparent;
+}
+
+/* 自定义文字颜色 */
+.font-emphasis {
+    color: #ee4444;
+    margin: 0px 2px;
+}
+
+.toast-high {
+    color: #ffe000;
 }

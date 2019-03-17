@@ -59,6 +59,7 @@ $(function () {
             $('.pageTurnBtn .pageRight').text('查看分数');
             $('.pageTurnBtn .pageRight')[0].onmousedown = function () {
                 $('#map-bg').addClass('narrow').removeClass('largen');
+                $('#scorePanel').fadeIn(1500);
             }
         } else {
             $('.pageTurnBtn .pageRight').text('下一个');

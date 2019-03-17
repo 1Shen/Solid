@@ -147,12 +147,16 @@ $(function () {
 
     // 玛瑙研钵
     $.contextMenu({
-        selector: '#empty-agate_mortar_menu',
+        selector: '#agate_mortar_menu',
         animation: {
             duration: 200
         },
         callback: function (key) {
-            
+            if (key == 'clear') {
+                let bowl = global.object.model['empty-agate_mortar'].modelObject;
+                replaceModel(bowl, "empty", "agate_mortar");
+                bowl.currVal = 0;
+            }
         },
         items: {
             name: {

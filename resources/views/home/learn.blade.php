@@ -119,7 +119,8 @@
                     <video src="/static/videos/step4.mp4" data-ckin="default" data-overlay="2" data-title="固体红外光谱的测试与分析"></video>
                 </div>
                 <div id="video5" class="video-container col-md-9">
-                    <a href="{{ url('game') }}" class="layui-btn">开始实验</a>
+                    <a href="{{ url('game') }}" class="layui-btn layui-btn-lg">开始实验</a>
+                    <a style="margin-left: 30px" href="{{ url('game') }}" class="layui-btn layui-btn-lg">课后练习</a>
                 </div>
             </div>
         </div>

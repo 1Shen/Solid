@@ -51,14 +51,14 @@ body {
     margin: 0;
 }
 
-#content .layui-tab-title{
+#content .layui-tab-title {
     width: 94%;
 }
 
 #content .layui-tab-title li {
     font-size: 17.1px;
     letter-spacing: -0.5px;
-    margin-right: 5px;
+    width: 104px;
 }
 
 /* col-left */
@@ -118,4 +118,8 @@ body {
 .content-img img {
     max-height: 300px;
     max-width: 350px;
+}
+
+.sidebar .content {
+    margin-bottom: 50px;
 }

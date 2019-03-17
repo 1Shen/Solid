@@ -8,6 +8,7 @@
                 </a>
                 <li id="index-nav" class="nav-item"><a href="{{ url('/') }}">主页</a></li>
                 <li id="learn-nav" class="nav-item"><a href="{{ url('learn') }}">课程</a></li>
+                <li id="exercise-nav" class="nav-item"><a href="{{ url('learn') }}">习题</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li id="login-nav" class="nav-item"><a href="{{ url('login') }}">登录</a></li>

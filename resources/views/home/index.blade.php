@@ -22,7 +22,7 @@
                     <p>本实验旨在让学生通过虚拟仿真实验练习，掌握红外光谱仪的一些基本操作以及红外光谱测定的样品制备方法，熟悉如何由红外光谱鉴别官能团并根据官能团确定未知组分的主要结构。</p>
                 </div>
                 <a class="layui-btn layui-btn-lg" href="{{ url('game') }}">开始实验</a>
-                <a class="layui-btn layui-btn-lg margin-left-2x" href="{{ url('learn') }}">先去学习</a>
+                <a style="margin-left: 17px" class="layui-btn layui-btn-lg" href="{{ url('learn') }}">先去学习</a>
             </div>
         </div>
         <div id="content" class="container">
@@ -108,21 +108,15 @@
                         <br>
 
                         <div class="title">联系我们</div>
-                        QQ：
-                        <br>
-
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-
+                        <div class="content">
+                            <p>QQ：123456</p>
+                            <p>邮箱：123456@qq.com</p>
+                        </div>
                         <div class="title">其他</div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="blank-2x"></div>
     </div>
 
     @include('template.footer')

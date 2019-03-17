@@ -45,14 +45,14 @@
 
 <body onload="start()" oncontextmenu="return false">
 
-    <!-- <div id="scorePanel">
+    <div id="scorePanel" style="display: none">
         <div class="scroll-panel">
             <div class="title">实验结果</div>
             <div class="totalTime">
                 <div class=""></div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- 红外光谱背景 -->
     <div id="map-bg" class="narrow">
@@ -170,7 +170,7 @@
     <div class="text text-center" id="mainMenu" style="display:none">
         <div class="button button-3d" id="btnStart">开始实验</div>
         <div class="button button-3d" id="btnIns">操作说明</div>
-        <div class="button button-3d" id="btnExit">退出实验</div>
+        <div class="button button-3d" id="btnExit"><a href="{{ url('/') }}">退出实验</a></div>
     </div>
 
     <!-- tab -->
@@ -227,17 +227,10 @@
     <div id="press_screw_front_menu"></div>
     <div id="press_screw_top_menu"></div>
     <div id="stamper_top_menu"></div>
-    <div id="empty-agate_mortar_menu"></div>
+    <div id="agate_mortar_menu"></div>
 
     <!-- Listener -->
     <input type="hidden" value="0" id="loadStatusListener" onchange="loadStatusChange()">
 </body>
-
-<script>
-    $('#btnExit').click(function() {
-        sound['mouseClick'] ? sound['mouseClick'].play() : null;
-        window.location.replace("{{ url('/') }}");
-    });
-</script>
 
 </html> 

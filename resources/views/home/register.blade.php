@@ -68,7 +68,7 @@
                         </div>
 
                         <div class="layui-form-item">
-                            <label class="layui-form-label">单选框</label>
+                            <label class="layui-form-label">身份</label>
 
                             <div class="layui-input-block">
                                 <input type="radio" name="role" value="0" title="学生" checked>
@@ -88,11 +88,8 @@
 
                     </form>
                 </div>
-
                 <div class="col-md-2"></div>
-
             </div>
-
         </div>
     </div>
 

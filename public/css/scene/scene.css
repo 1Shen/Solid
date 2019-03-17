@@ -219,6 +219,10 @@ body {
     padding-top: 7px;
 }
 
+#btnExit a {
+    cursor: url(../../static/cursors/hand.cur), pointer;
+}
+
 #btnTip,
 #btnReturnIns,
 #btnReturnTip,
@@ -246,6 +250,10 @@ body {
 #btnReturnIns,
 #btnReturnTip {
     transform: translate(-50%, 50%);
+}
+
+#btnTip {
+    font-size: 225%;
 }
 
 #btnPause {

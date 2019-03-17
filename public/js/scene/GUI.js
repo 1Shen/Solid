@@ -76,23 +76,27 @@ $(function () {
 
 
     // main menu
+
+    $('#mainMenu .button').click(function () {
+        sound['mouseClick'] ? sound['mouseClick'].play() : null;
+    });
+
     $('#btnStart').click(function () {
         hideMainMenu();
         menu_shown = false;
-        sound['mouseClick'] ? sound['mouseClick'].play() : null;
     });
 
     $('#btnIns').click(function () {
         $('#textIns').fadeIn(400);
         $('#mainMenu').hide();
         ins_shown = true;
-        sound['mouseClick'] ? sound['mouseClick'].play() : null;
     });
 
     // 提示按钮
     $('#btnTip').click(function () {
         pause();
         $('#textTip').fadeIn(400);
+        sound['mouseClick'] ? sound['mouseClick'].play() : null;
     });
 
     // 关闭提示
@@ -382,7 +386,7 @@ function hideMainMenu() {
 
             // game start
             animation['3D_arrow'].play(-100, -30, 0);
-            showMessage("点击拿起实验台上的【药匙】", toast_time);
+            showMessage("点击拿起实验台上的 [ <span class='toast-high'>药匙</span> ]", toast_time);
         });
 
         // 初始化物品栏位置
@@ -484,10 +488,10 @@ function showMissonMsg(template) {
 
     sound['missionReceive'].play();
 
-    $('#btnTip').trigger('mouseover');
-    setTimeout(function () {
-        $('#btnTip').trigger('mouseout');
-    }, 2000);
+    // $('#btnTip').trigger('mouseover');
+    // setTimeout(function () {
+    //     $('#btnTip').trigger('mouseout');
+    // }, 2000);
 }
 //显示任务完成提示
 //TODO: 任务表来自动检索下一个应该显示的任务提示
@@ -567,6 +571,7 @@ function btnPauseClick() {
     $('#btnStart').text("继续实验");
     showMainMenu();
     menu_shown = true;
+    sound['mouseClick'] ? sound['mouseClick'].play() : null;
 }
 
 //===============================================================================================
