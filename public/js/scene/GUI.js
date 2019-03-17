@@ -242,7 +242,7 @@ $(function () {
         }
     });
 
-    //选项卡点击事件
+    // 选项卡点击事件
     $('.title').click(function () {
 
         $('.ins-body').scrollTop(0);
@@ -265,10 +265,67 @@ $(function () {
         sound['bookPage'].play ? sound['bookPage'].play() : null;
     });
 
-    //选项卡悬停
+    // 选项卡悬停
     $('.title').hover(function () {
         $(this).tooltip('show');
     });
+
+    // 放大镜
+    $('#bowl-search').click(function () {
+
+        openSearch();
+
+        let bowl = global.object.model['empty-agate_mortar'].modelObject;
+
+        openMagnifier(new THREE.Vector3(
+            bowl.position.x,
+            bowl.position.y + 65,
+            bowl.position.z
+        ), new THREE.Vector3(
+            bowl.position.x,
+            bowl.position.y,
+            bowl.position.z
+        ));
+    });
+    $('#stamper-search').click(function () {
+        openSearch();
+        let middle = global.object.model['empty-stamper_middle'].modelObject;
+        openMagnifier(new THREE.Vector3(
+            middle.position.x,
+            middle.position.y + 15,
+            middle.position.z + 15
+        ), new THREE.Vector3(
+            middle.position.x,
+            middle.position.y - 4,
+            middle.position.z
+        ));
+    });
+    $('#press-search').click(function () {
+        openSearch();
+        let pointer = global.object.model['press_pointer'].modelObject;
+        openMagnifier(new THREE.Vector3(
+            pointer.position.x,
+            -16,
+            pointer.position.z
+        ), new THREE.Vector3(
+            pointer.position.x,
+            -40.2,
+            pointer.position.z
+        ));
+    });
+    $('#analyzer-search').click(function () {
+        openSearch();
+        let fixFrame = global.object.model['infrared_analyzer_fix_frame'].modelObject;
+        openMagnifier(new THREE.Vector3(
+            fixFrame.position.x - 30,
+            fixFrame.position.y + 10,
+            fixFrame.position.z + 20
+        ), new THREE.Vector3(
+            fixFrame.position.x,
+            fixFrame.position.y,
+            fixFrame.position.z
+        ));
+    })
 });
 
 // 获得物品

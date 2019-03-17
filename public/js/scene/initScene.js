@@ -45,6 +45,17 @@ function initRenderer() {
     // canvas.appendChild(stats.domElement);
 }
 
+// 展开放大镜扩展
+function openSearch() {
+    if ($('.search-group').hasClass('smaller')) {
+        $('.search-group').addClass('bigger').removeClass('smaller');
+        $('#btnSearch').removeClass('fa-search').addClass('fa-times');
+    } else {
+        $('.search-group').addClass('smaller').removeClass('bigger');
+        $('#btnSearch').removeClass('fa-times').addClass('fa-search');
+    }
+}
+
 // 打开放大镜视野
 function openMagnifier(pos = null, target = null) {
 

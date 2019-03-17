@@ -113,8 +113,19 @@
             </div>
         </div>
         <!-- 放大镜 -->
-        <i onclick="openMagnifier()" class="fa fa-search button-raised button-circle button-jumbo" id="btnSearch" aria-hidden="true" style="display:none"></i>
-
+        <i onclick="openSearch()" class="fa fa-search button-raised button-circle button-jumbo" id="btnSearch" aria-hidden="true" style="display:none"></i>
+        <div id="bowl-search" class="smaller search-group button-raised button-circle button-jumbo">
+            <img src="/static/images/item/empty-agate_mortar.png" alt="">
+        </div>
+        <div id="stamper-search" class="smaller search-group button-raised button-circle button-jumbo">
+            <img src="/static/images/instruction/stamper.png" alt="">
+        </div>
+        <div id="press-search" class="smaller search-group button-raised button-circle button-jumbo">
+            <img src="/static/images/instruction/press.png" alt="">
+        </div>
+        <div id="analyzer-search" class="smaller search-group button-raised button-circle button-jumbo">
+            红外
+        </div>
     </div>
 
     <div id="arrow_upon_item">

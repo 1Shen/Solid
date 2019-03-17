@@ -471,7 +471,8 @@ function grind() {
             animation['grind'].onPlayDone = function () {
                 replaceModel(bowl, "product", "agate_mortar");
                 bowl.sample.children[0].material.color.setHex(0xffffff);
-
+                bowl.sample.position.y -= 2;
+                bowl.currVal -= 2;
                 stepComplete(2, 1);
                 missionComplete(mission_step);
             }
@@ -683,7 +684,6 @@ function replaceModel(model, reagent, name) {
             let y;
             if (model.changeable == false) {
                 y = this.position.y;
-                console.log("asd")
             } else {
                 y = this.position.y + this.currVal - this.initVal;
             }
