@@ -45,11 +45,41 @@
 
 <body onload="start()" oncontextmenu="return false">
 
-    <div id="scorePanel" style="display: none">
+    <div id="scorePanel">
         <div class="scroll-panel">
             <div class="title">实验结果</div>
-            <div class="totalTime">
-                <div class=""></div>
+            <div class="content">
+                总时长：<span class="text">00:06:35</s>
+            </div>
+            <div class="content">
+                总扣分：<span class="text">14</span>
+            </div>
+            <div class="content">
+                错误操作个数：<span class="text">4</span>
+            </div>
+            <p class="blank-1x"></p>
+            <div class="error">
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <div class="text">研磨固体粉末比例不正确</div>
+            </div>
+            <div class="error">
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <div class="text">压力机压力值过大</div>
+            </div>
+            <div class="error">
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <div class="text">压力机施压状态下试图取出压模</div>
+            </div>
+            <div class="error">
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <div class="text">研磨固体粉末比例不正确</div>
+            </div>
+            <p class="blank-2x"></p>
+            <div class="score">
+                <span>最终得分：</span><span class="text">86</s>
+            </div>
+            <div class="rank">
+                <span>评级：</span><span class="text">B<sup>+</sup></s>
             </div>
         </div>
     </div>
