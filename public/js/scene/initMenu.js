@@ -156,6 +156,8 @@ $(function () {
                 let bowl = global.object.model['empty-agate_mortar'].modelObject;
                 replaceModel(bowl, "empty", "agate_mortar");
                 bowl.currVal = 0;
+                bowl['needKBr'] = 4;
+                bowl['needsample'] = 1;
             }
         },
         items: {

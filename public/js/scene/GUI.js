@@ -97,6 +97,8 @@ $(function () {
         pause();
         $('#textTip').fadeIn(400);
         sound['mouseClick'] ? sound['mouseClick'].play() : null;
+        minusScore += 5;
+        console.log(minusScore);
     });
 
     // 关闭提示
@@ -512,6 +514,7 @@ function showErrorMsg(template) {
     });
 
     sound['error'].play();
+
 }
 
 //显示物品提示

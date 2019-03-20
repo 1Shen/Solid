@@ -27,3 +27,7 @@ Route::get('learn', function () {
 Route::get('register', function () {
     return view('home.register');
 });
+
+Route::get('quiz', function () {
+    return view('home.quiz');
+});

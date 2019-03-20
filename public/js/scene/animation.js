@@ -240,7 +240,8 @@ function initLoosenAnime() {
         }
 
         if (front.count > 0) {
-            showErrorMsg('压力机正处于施压状态');
+            showErrorMsg('压力机正处于施压状态'); 
+            recordError("压力机正处于施压状态");
             return;
         }
 
@@ -303,6 +304,7 @@ function initPressAnime() {
 
         if (model.count == model.maxCount) {
             showErrorMsg('压力值过大');
+            recordError("压力值过大");
             return;
         }
 

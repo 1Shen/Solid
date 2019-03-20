@@ -184,14 +184,6 @@ body::-webkit-scrollbar {
 }
 
 /* footer */
-.footer {
-    bottom: 0;
-    height: 60px;
-    /* background-color: #e7e7e7; */
-    background-color: #fff;
-}
-
-/* header, footer, main */
 
 #main {
     min-height: 630px;
@@ -202,4 +194,5 @@ body::-webkit-scrollbar {
     font-size: 15px;
     color: #777;
     line-height: 19px;
+    height: 60px;
 }
