@@ -38,3 +38,10 @@ Route::get('learn', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('register', function () {
+    return view('home.register');
+});
+
+Route::get('quiz', function () {
+    return view('home.quiz');
+});

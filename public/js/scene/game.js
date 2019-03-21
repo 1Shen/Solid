@@ -320,7 +320,14 @@ var action = {
     // 玛瑙钵杵
     "agate_pestle": {
         "mixture-agate_mortar": {
-            do: grind
+            do: function () {
+                grind();
+                let mortar = global.object.model['empty-agate_mortar'].modelObject;
+                if (mortar['needKBr'] != 0 || mortar['needsample'] != 0) {
+                    showErrorMsg('尚未按正确比例混合样品与溴化钾');
+                    recordError("尚未按正确比例混合样品与溴化钾");
+                }
+            }
         },
 
         "product-agate_mortar": {

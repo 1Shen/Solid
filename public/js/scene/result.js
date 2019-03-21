@@ -46,11 +46,11 @@ $(function () {
             let gifPath = "/static/images/molecule/" + fileName + ".gif";
             $("#map-bg .gif").css('top', $("#map-bg .introduce .text").attr('data-img-top'));
             $("#map-bg .gif").css('left', $("#map-bg .introduce .text").attr('data-img-left'));
-
             $("#map-bg .gif img").attr('src', gifPath);
 
             $("#map-bg .introduce").css('top', $("#map-bg .introduce .text").attr('data-top'));
             $("#map-bg .introduce").css('left', $("#map-bg .introduce .text").attr('data-left'));
+
             $("#map-bg .gif img").hide().fadeIn(600);
             $("#map-bg .introduce").fadeIn(400);
         });
@@ -59,6 +59,8 @@ $(function () {
             $('.pageTurnBtn .pageRight').text('查看分数');
             $('.pageTurnBtn .pageRight')[0].onmousedown = function () {
                 $('#map-bg').addClass('narrow').removeClass('largen');
+
+                displayResult();
                 $('#scorePanel').fadeIn(1500);
             }
         } else {
@@ -106,6 +108,27 @@ var level = {
     "40": 0.7
 }
 
+// 错误列表
+var errorList = {
+    // 类型:{文本，分数}
+
+    "尚未按正确比例混合样品与溴化钾": {
+        text: "未按正确比例混合样品与溴化钾即开始研磨",
+        score: 7,
+        done: 0
+    },
+    "压力值过大": {
+        text: "制作装片时加压过大会损坏压模",
+        score: 11,
+        done: 0
+    },
+    "压力机正处于施压状态": {
+        text: "压力机处于施压状态时不能取出压模",
+        score: 13,
+        done: 0
+    }
+}
+
 // 计算游戏评级
 function scoreLevel() {
 
@@ -123,6 +146,7 @@ function scoreLevel() {
 
 // TODO: 游戏结算（结果展示）
 function displayResult() {
+    $('#scorePanel .errorList').nextAll().hide();
 
     // 最终得分
     let finalScore = global.system.score * scoreLevel() - minusScore;
@@ -154,8 +178,31 @@ function displayResult() {
     }
 
     // TODO: 结果展示
-}
+    // 时间
+    $('#scorePanel .time .text').text(totalTimeText);
 
+    // 错误
+    let count = 0;
+    for (var name in errorList) {
+        if (errorList[name].done) {
+            let error = $('<div class="error"><i class="fa fa-times" aria-hidden="true"></i></div>');
+            count++;
+            error.find('i').after('<div class="text"></div>')
+            error.find('.text').text(errorList[name].text);
+            $('#scorePanel .errorList').append(error);
+            $('#scorePanel .errorList .error').hide();
+        }
+    }
+
+    $('#scorePanel .count .text').text(count);
+    showRecord($('.error').first());
+    // console.log($('.errorList'));
+
+    // 分数及评级
+    $('#scorePanel .score .text').text(finalScore);
+    $('#scorePanel .rank .text').text(rank[0]).append('<sup></sup>');
+    $('#scorePanel .rank').find('sup').text(rank[1]);
+}
 
 // 计时器
 $(function () {
@@ -216,3 +263,23 @@ $(function () {
         }
     });
 });
+
+// 错误记录
+function recordError(name) {
+    let text = errorList[name].text;
+    minusScore += errorList[name].score;
+    errorList[name].done = 1;
+}
+
+// 显示记录
+function showRecord(div) {
+    if (div.hasClass('error')) {
+        div.fadeIn(1500);
+        div = div.next();
+        setTimeout(function () {
+            showRecord(div);
+        }, 1000);
+    } else {
+        $('#scorePanel .errorList').nextAll().fadeIn(1000);
+    }
+}
