@@ -16,14 +16,25 @@ Route::get('/', function () {
     return view('home.index');
 });
 
-Route::get('login', 'UserController@index');
-
-Route::get('game', 'GameController@index');
-
-Route::get('learn', function () {
-    return view('home.learn');
+// login
+Route::get('login', function () {
+    return view('home.login');
 });
+Route::post('/user/login', 'UserController@login');
 
+// register
 Route::get('register', function () {
     return view('home.register');
 });
+Route::post('register', 'UserController@register');
+
+// game
+Route::get('game', 'GameController@index');
+
+// learn
+Route::get('learn', function () {
+    return view('home.learn');
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
