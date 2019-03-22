@@ -23,6 +23,7 @@
     <script src='/lib/ThreeJS/loaders/MTLLoader.js'></script>
     <script src='/lib/ThreeJS/loaders/OBJLoader.js'></script>
     <script src='/lib/ThreeJS/loaders/TGALoader.js'></script>
+    <script src='/lib/ThreeJS/loaders/GLTFLoader.js'></script>
     <!-- js -->
     <script src="/js/scene/global.js"></script>
     <script src="/js/scene/utils.js"></script>

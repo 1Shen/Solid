@@ -1,0 +1,159 @@
+{
+  "accessors": [
+    {
+      "name": "Box001_1_positions",
+      "componentType": 5126,
+      "count": 41,
+      "min": [
+        -7.070199966430664,
+        -12.593000411987305,
+        -7.070199966430664
+      ],
+      "max": [
+        7.070199966430664,
+        12.593000411987305,
+        7.070199966430664
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 0
+    },
+    {
+      "name": "Box001_1_normals",
+      "componentType": 5126,
+      "count": 41,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3",
+      "bufferView": 0,
+      "byteOffset": 492
+    },
+    {
+      "name": "Box001_1_texcoords",
+      "componentType": 5126,
+      "count": 41,
+      "min": [
+        0,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2",
+      "bufferView": 1,
+      "byteOffset": 0
+    },
+    {
+      "name": "Box001_1_0_indices",
+      "componentType": 5123,
+      "count": 60,
+      "min": [
+        0
+      ],
+      "max": [
+        40
+      ],
+      "type": "SCALAR",
+      "bufferView": 2,
+      "byteOffset": 0
+    }
+  ],
+  "asset": {
+    "generator": "obj2gltf",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "name": "arrow",
+      "byteLength": 1432,
+      "uri": "data:application/octet-stream;base64,rfo8QO58SUGt+jzArfo8QCntScCt+jzArfo8wCntScCt+jzArfo8wO58SUGt+jzArfo8QO58SUGt+jxArfo8wO58SUGt+jxArfo8wCntScCt+jxArfo8QCntScCt+jxArfo8QO58SUGt+jzArfo8wO58SUGt+jzArfo8wO58SUGt+jxArfo8QO58SUGt+jxArfo8wO58SUGt+jzArfo8wCntScCt+jzArfo8wCntScCt+jxArfo8wO58SUGt+jxArfo8wCntScCt+jzArfo8QCntScCt+jzArfo8QCntScCt+jxArfo8wCntScCt+jxArfo8QCntScCt+jzArfo8QO58SUGt+jzArfo8QO58SUGt+jxArfo8QCntScCt+jxAAAAAgO58ScEAAAAAFD/iQL6fSsAUP+JAFD/iwL6fSsAUP+JAAAAAgO58ScEAAAAAFD/iwL6fSsAUP+JAFD/iwL6fSsAUP+LAAAAAgO58ScEAAAAAFD/iwL6fSsAUP+LAFD/iQL6fSsAUP+LAAAAAgO58ScEAAAAAFD/iQL6fSsAUP+LAFD/iQL6fSsAUP+JAFD/iQL6fSsAUP+JAAAAAgL6fSsAAAAAAFD/iwL6fSsAUP+JAFD/iwL6fSsAUP+LAFD/iQL6fSsAUP+LAAAAAgAAAAIAAAIC/AAAAgAAAAIAAAIC/AAAAgAAAAIAAAIC/AAAAgAAAAIAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAACAvwAAAAAAAACAAACAvwAAAAAAAACAAACAvwAAAAAAAACAAACAvwAAAAAAAACAAAAAgAAAgL8AAAAAAAAAgAAAgL8AAAAAAAAAgAAAgL8AAAAAAAAAgAAAgL8AAAAAAACAPwAAAIAAAACAAACAPwAAAIAAAACAAACAPwAAAIAAAACAAACAPwAAAIAAAACAAAAAgJqZGb/NzEw/AAAAgJqZGb/NzEw/AAAAgJqZGb/NzEw/zcxMv5qZGb8AAAAAzcxMv5qZGb8AAAAAzcxMv5qZGb8AAAAAAAAAgJqZGb/NzEy/AAAAgJqZGb/NzEy/AAAAgJqZGb/NzEy/zcxMP5qZGb8AAAAAzcxMP5qZGb8AAAAAzcxMP5qZGb8AAAAAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAACAPwAAgD8AAIA/AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAPwAAAAAAAAAAAACAPwAAgD8AAIA/AAAAPwAAAAAAAAAAAACAPwAAgD8AAIA/AAAAPwAAAAAAAAAAAACAPwAAgD8AAIA/AAAAPwAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAA/AAAAPwAAgD8AAAAAAACAPwAAgD8AAAAAAACAPwAAAQACAAAAAgADAAQABQAGAAQABgAHAAgACQAKAAgACgALAAwADQAOAAwADgAPABAAEQASABAAEgATABQAFQAWABQAFgAXABgAGQAaABsAHAAdAB4AHwAgACEAIgAjACQAJQAmACYAJQAnACcAJQAoACgAJQAkAA=="
+    }
+  ],
+  "bufferViews": [
+    {
+      "name": "bufferView_0",
+      "buffer": 0,
+      "byteLength": 984,
+      "byteOffset": 0,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_1",
+      "buffer": 0,
+      "byteLength": 328,
+      "byteOffset": 984,
+      "byteStride": 8,
+      "target": 34962
+    },
+    {
+      "name": "bufferView_2",
+      "buffer": 0,
+      "byteLength": 120,
+      "byteOffset": 1312,
+      "target": 34963
+    }
+  ],
+  "materials": [
+    {
+      "name": "wire_148214236",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5804,
+          0.8392,
+          0.9255,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.968
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Box001_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Box001",
+      "mesh": 0
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

@@ -54,6 +54,39 @@ function load3DModel(modelFilePath, hasTexture = false, objectName = '') {
     });
 }
 
+function loadGLTFModel(modelFilePath, hasTexture = false, objectName = '') {
+    var modelFileName = modelFilePath.substr(modelFilePath.lastIndexOf('/') + 1);
+    var loader = new THREE.GLTFLoader();
+    loader.setPath(modelFilePath + "/");
+
+    loader.load(modelFileName + '.gltf', function (gltf) {
+        var object = gltf.scene;
+        console.log(object)
+
+        // 命名
+        object.name = objectName ? objectName : modelFileName;
+
+        // 加入全局模型数组
+        global.object.model[object.name] = {
+            modelObject: object
+        }
+
+        // 触发模型加载进度的监听器
+        updateLoadStatus();
+
+        // 加载纹理贴图
+        if (hasTexture) {
+            var texture = new THREE.TGALoader().load(modelFilePath + "/" + modelFileName + ".tga");
+            object.traverse(function (child) {
+                if (child instanceof THREE.Mesh) {
+                    child.material.map = texture;
+                    child.material.needsUpdate = true;
+                }
+            });
+        }
+    });
+}
+
 function updateLoadStatus() {
     document.getElementById('loadStatusListener').value++;
     document.getElementById('loadStatusListener').onchange();

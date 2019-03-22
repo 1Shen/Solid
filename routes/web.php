@@ -35,13 +35,13 @@ Route::get('game', 'GameController@index');
 Route::get('learn', function () {
     return view('home.learn');
 });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('register', function () {
     return view('home.register');
 });
 
-Route::get('quiz', function () {
-    return view('home.quiz');
-});
+Route::get('quiz', 'QuizController@index');

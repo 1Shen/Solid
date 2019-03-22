@@ -1,7 +1,7 @@
 // game.js
 // TODO: 游戏过程逻辑，控制游戏正确顺序 --舍弃过程逻辑
 
-//任务提示对照表
+// 任务提示对照表
 const missionTip = {
     '获取待测样品': '<p>左键获取桌上药匙，在物品栏中点击激活药匙，点击桌上装有待测样品的烧杯，即可获取待测样品。</p>',
     '在玛瑙研钵中加入适当比例的样品和溴化钾固体': '<p>点击激活装有样品的药匙后，点击桌上的玛瑙研钵即可将药匙上的样品装入研钵。</p><p>用同样的方法加入1：100的溴化钾，即可满足研磨所需。</p><p>注意：取样品一次1mg，取溴化钾一次20mg。</p>',
@@ -873,7 +873,7 @@ function placeItem(event) {
 
         let model = global.object.model[itemName].modelObject;
 
-        if (model instanceof THREE.Group) {
+        if (model instanceof THREE.Group || model instanceof THREE.Scene) {
             model.show(ret.point.x, model.origin.y, ret.point.z);
         } else {
             model.show(ret.point.x, model.component[0].origin.y, ret.point.z);
