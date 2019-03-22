@@ -29,17 +29,6 @@ function load3DModel(modelFilePath, hasTexture = false, objectName = '') {
         objLoader.setPath(modelFilePath + "/");
         objLoader.load(modelFileName + ".obj", function (object) {
 
-            // 加载纹理贴图
-            if (hasTexture) {
-                var texture = new THREE.TGALoader().load(modelFilePath + "/" + modelFileName + ".tga");
-                object.traverse(function (child) {
-                    if (child instanceof THREE.Mesh) {
-                        child.material.map = texture;
-                        child.material.needsUpdate = true;
-                    }
-                });
-            }
-
             // 命名
             object.name = objectName ? objectName : modelFileName;
 
@@ -50,6 +39,17 @@ function load3DModel(modelFilePath, hasTexture = false, objectName = '') {
 
             // 触发模型加载进度的监听器
             updateLoadStatus();
+
+            // 加载纹理贴图
+            if (hasTexture) {
+                var texture = new THREE.TGALoader().load(modelFilePath + "/" + modelFileName + ".tga");
+                object.traverse(function (child) {
+                    if (child instanceof THREE.Mesh) {
+                        child.material.map = texture;
+                        child.material.needsUpdate = true;
+                    }
+                });
+            }
         });
     });
 }

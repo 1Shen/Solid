@@ -107,7 +107,7 @@
                     </ul>
                 </div>
                 <div id="video1" class="video-container col-md-9">
-                    <video src="/static/videos/step1.mp4" data-ckin="default" data-overlay="2" data-title="固体红外光谱的测试与分析"></video>
+                    <video src="/static/videos/step1.mp4"></video>
                 </div>
                 <div id="video2" class="video-container col-md-9" style="display:none">
                     <video src="/static/videos/step2.mp4" data-ckin="default" data-overlay="2" data-title="固体红外光谱的测试与分析"></video>
