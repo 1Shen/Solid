@@ -28,6 +28,5 @@ Route::get('register', function () {
     return view('home.register');
 });
 
-Route::get('quiz', function () {
-    return view('home.quiz');
-});
+Route::get('quiz', 'QuizController@index');
+
