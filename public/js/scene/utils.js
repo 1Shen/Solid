@@ -61,7 +61,6 @@ function loadGLTFModel(modelFilePath, hasTexture = false, objectName = '') {
 
     loader.load(modelFileName + '.gltf', function (gltf) {
         var object = gltf.scene;
-        console.log(object)
 
         // 命名
         object.name = objectName ? objectName : modelFileName;
