@@ -21,6 +21,8 @@ body {
 
 .layui-form-switch {
     height: 24.4px;
+    transform: scale(1.3, 1.3);
+    margin-left: 15px;
 }
 
 .btn-blank {
@@ -32,7 +34,7 @@ body {
 }
 
 .layui-btn {
-    width: 100px;
+    min-width: 100px;
     margin: 0 50px;
 }
 
@@ -73,4 +75,11 @@ body {
     width: 300px !important;
     min-width: 200px !important;
     max-width: 300px !important;
+}
+
+.title {
+    display: flex;
+    font-size: 26px;
+    justify-content: center;
+    margin-top: 10px;
 }
