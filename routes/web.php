@@ -1,5 +1,7 @@
 <?php
 
+use Carbon\Traits\Rounding;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,21 +14,10 @@
 */
 
 // 首页
+
 Route::get('/', function () {
     return view('home.index');
 });
-
-// login
-Route::get('login', function () {
-    return view('home.login');
-});
-Route::post('/user/login', 'UserController@login');
-
-// register
-// Route::get('register', function () {
-//     return view('home.register');
-// });
-// Route::post('register', 'UserController@register');
 
 // game
 Route::get('game', 'GameController@index');
@@ -36,11 +27,17 @@ Route::get('learn', function () {
     return view('home.learn');
 });
 
-Auth::routes();
+// quiz
+Route::get('quiz', 'QuizController@index');
+Route::post('quiz/add', 'QuizController@addQuiz')->middleware('filter_empty_values');
+Route::get('quiz/fetch', 'QuizController@fetchQuizzes');
 
+// user
+Route::get('user', 'UserController@index');
+
+Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('register1', function () {
     return view('home.register');
 });
-
-Route::get('quiz', 'QuizController@index');

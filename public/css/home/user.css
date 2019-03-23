@@ -1,0 +1,14 @@
+#addQuizzes {
+    display: flex;
+    flex-direction: column;
+    font-size: 17.2px;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-left: 500px;
+}
+
+#addQuizzes div {
+    margin-bottom: 20px;
+    display: flex;
+    
+}

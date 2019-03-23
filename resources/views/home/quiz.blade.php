@@ -40,7 +40,9 @@
                 </div>
             </form>
             <div class="explaination">在2962cm<sup>-1</sup>处的峰是CH<SUB>3</SUB>基团的反对称伸缩振动。这种反对称伸缩振动的范围为2962±10cm<sup>-1</sup>，事实上，存在两个简并的反对称伸缩振动（显示其中一个）。</div>
-            <div class="q-button"><div class="layui-btn layui-btn-lg">提交</div></div>
+            <div class="q-button">
+                <div class="layui-btn layui-btn-lg">提交</div>
+            </div>
         </div>
     </div>
 
@@ -60,7 +62,17 @@
                 layer.msg(JSON.stringify(data.field));
                 return false;
             });
-            console.log('hello');
+        });
+
+        // 从题库中拉取10道随机选择题
+        $.ajax({
+            type: "GET",
+            url: "{{ url('quiz/fetch') }}",
+            dataType: "json",
+            success: function (res) {
+                var quizzes = res.quizzes;
+                console.log(quizzes);
+            }
         });
     });
 </script>

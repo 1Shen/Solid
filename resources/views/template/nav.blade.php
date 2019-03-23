@@ -22,7 +22,7 @@
                         admin
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">个人中心</a></li>
+                        <li><a href="{{ url('user') }}">个人中心</a></li>
                         <li><a href="#">在线商城</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault();

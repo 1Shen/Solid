@@ -99,7 +99,7 @@
                     <div class="sidebar">
                         <div class="title">教师简介</div>
                         <div class="avatar">
-                            <img src="/static/images/avatar.jpg" alt="">
+                            <img src="{{ asset('storage/quiz/pic/dcIcWnvMlyvXj5nI2uInbpQNe4Lzgfy0H96R4WgU.jpeg') }}" alt="">
                         </div>
                         <br>
                         <br>
