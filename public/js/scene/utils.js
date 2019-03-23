@@ -258,6 +258,9 @@ $.fn.scrollEnd = function (callback, timeout) {
     });
 })(jQuery);
 
+$.fn.reShow = function (duration = 0) {
+    this.hide().fadeIn(duration);
+}
 //===============================================================================================
 
 // 小数转百分数

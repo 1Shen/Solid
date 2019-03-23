@@ -12,44 +12,104 @@
 <body ng-app="">
     @include('template.nav')
 
-    @if ($user->role == 2)
-    校外人士
-    @elseif ($user->role == 1)
-    <div id="addQuizzes">
-        <div>题目：<textarea class="title"></textarea></div>
-        <div>
-            背景图片：
-            <input class="bg" type="file">
-        </div>
-        <div>
-            选项A：<input class="atext" type="text">
-            <input class="aimg" type="file">
-        </div>
-        <div>
-            选项B：<input class="btext" type="text">
-            <input class="bimg" type="file">
-        </div>
-        <div>
-            选项C：<input class="ctext" type="text">
-            <input class="cimg" type="file">
-        </div>
-        <div>
-            选项D：<input class="dtext" type="text">
-            <input class="dimg" type="file">
-        </div>
-        <div>
-            正确答案：<input class="answer" type="text">
-        </div>
-        <div>
-            答案解析：<textarea class="analysis"></textarea>
-        </div>
-        <a class="layui-btn" href="javascript: uploadQuiz()">上传题目</a>
-    </div>
-    @elseif ($user->role == 0)
-    学生
-    @endif
+    <ul id="nav-side" class="layui-nav layui-nav-tree layui-nav-side" lay-filter="test">
+        <li class="layui-nav-item layui-nav-itemed">
+            <a href="javascript:;">个人信息</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">首页</a></dd>
+                <dd><a href="javascript:;">修改信息</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">管理题库</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">添加题目</a></dd>
+                <dd><a href="javascript:;">修改题目</a></dd>
+            </dl>
+        </li>
+    </ul>
 
-    @include('template.footer')
+    <div id="main">
+        @if ($user->role == 2)
+        校外人士
+        @elseif ($user->role == 1)
+        <div class="layui-row layui-col-space15">
+            <div class="titles layui-card layui-col-md11">
+                <div class="layui-card-header">题目：</div>
+                <div class="layui-card-body">
+                    <textarea class="title"></textarea>
+                    <div>背景图片：<input class="bg" type="file"></div>
+                </div>
+            </div>
+
+            <div class="options layui-card layui-col-md11">
+                <div class="layui-card-header">选项</div>
+                <div class="layui-card-body">
+                    <div class="layui-row layui-col-space15">
+                        <div class="layui-card layui-col-md5 layui-col-md-offset1">
+                            <div class="layui-card-header">选项A：</div>
+                            <div class="layui-card-body">
+                                <input class="atext" type="text">
+                                <input class="aimg" type="file">
+                            </div>
+                        </div>
+                        <div class="layui-card layui-col-md5 layui-col-md-offset1">
+                            <div class="layui-card-header">选项B：</div>
+                            <div class="layui-card-body">
+                                <input class="btext" type="text">
+                                <input class="bimg" type="file">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-row layui-col-space15">
+                        <div class="layui-card layui-col-md5 layui-col-md-offset1">
+                            <div class="layui-card-header">选项C：</div>
+                            <div class="layui-card-body">
+                                <input class="ctext" type="text">
+                                <input class="cimg" type="file">
+                            </div>
+                        </div>
+                        <div class="layui-card layui-col-md5 layui-col-md-offset1">
+                            <div class="layui-card-header">选项D：</div>
+                            <div class="layui-card-body">
+                                <input class="dtext" type="text">
+                                <input class="dimg" type="file">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="answers layui-card layui-col-md11">
+                <div class="layui-card-header">答案</div>
+                <div class="layui-card-body">
+                    <div class="layui-row">
+                        <div class="layui-card layui-col-md5 layui-col-md-offset1">
+                            <div class="layui-card-header">正确答案：</div>
+                            <div class="layui-card-body">
+                                <input class="answer" type="text">
+                            </div>
+                        </div>
+                        <div class="layui-card layui-col-md5 layui-col-md-offset1">
+                            <div class="layui-card-header">答案解析：</div>
+                            <div class="layui-card-body">
+                                <input class="analysis" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="u-button layui-col-md12">
+                <a class="layui-btn" href="javascript: uploadQuiz()">上传题目</a>
+            </div>
+        </div>
+        @elseif ($user->role == 0)
+        学生
+        @endif
+        @include('template.footer')
+
+    </div>
+
 </body>
 
 <script>
@@ -62,7 +122,7 @@
             }
         });
 
-        $('#index-nav').addClass('nav-active');
+        $('#dropdown-nav').addClass('nav-active');
         navbarBind();
 
         // element模块

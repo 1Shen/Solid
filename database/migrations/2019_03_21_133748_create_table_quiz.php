@@ -15,11 +15,11 @@ class CreateTableQuiz extends Migration
     {
         Schema::create('quizzes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
-            $table->string('pic');
-            $table->string('options');
+            $table->string('title', 256);
+            $table->string('pic', 256);
+            $table->string('options', 2048);
             $table->string('answer');
-            $table->string('analysis');
+            $table->string('analysis', 512);
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateTableQuiz extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('quizs');
+        Schema::dropIfExists('quizzes');
     }
 }

@@ -16,15 +16,15 @@ class QuizController extends Controller
     public function addQuiz(Request $request)
     {
         $pic_path = $request->file('pic') ?
-            substr($request->file('pic')->store('public/quiz/pic'), 7) : '';
+            substr($request->file('pic')->store('public/quiz/pic'), 6) : '';
         $aimg_path = $request->file('aimg') ?
-            substr($request->file('aimg')->store('public/quiz/options'), 7) : '';
+            substr($request->file('aimg')->store('public/quiz/options'), 6) : '';
         $bimg_path = $request->file('bimg') ?
-            substr($request->file('bimg')->store('public/quiz/options'), 7) : '';
+            substr($request->file('bimg')->store('public/quiz/options'), 6) : '';
         $cimg_path = $request->file('cimg') ?
-            substr($request->file('cimg')->store('public/quiz/options'), 7) : '';
+            substr($request->file('cimg')->store('public/quiz/options'), 6) : '';
         $dimg_path = $request->file('dimg') ?
-            substr($request->file('dimg')->store('public/quiz/options'), 7) : '';
+            substr($request->file('dimg')->store('public/quiz/options'), 6) : '';
 
         $options = array(
             'A' => array('text' => $request->input('atext'), 'img' => $aimg_path),

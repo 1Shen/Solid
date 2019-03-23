@@ -1,14 +1,64 @@
-#addQuizzes {
-    display: flex;
-    flex-direction: column;
-    font-size: 17.2px;
-    align-items: flex-start;
-    margin-top: 20px;
-    margin-left: 500px;
+body {
+    background-color: #e7e7e7;
 }
 
-#addQuizzes div {
-    margin-bottom: 20px;
+#nav-side {
+    padding-top: 50px;
+    margin-bottom: 0;
+}
+
+#main {
+    position: absolute;
+    left: 200px;
+    right: 0;
+}
+
+#main>div {
+    padding: 40px;
     display: flex;
-    
+    align-items: center;
+    flex-direction: column;
+}
+
+#main>div>.layui-card {
+    margin: 20px 50px;
+}
+
+.titles>.layui-card-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.options>.layui-card-body,
+.answers>.layui-card-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.options>.layui-card-body>.layui-row,
+.answers>.layui-card-body>.layui-row {
+    width: 100%;
+    padding: 20px 50px;
+}
+
+.options .layui-card,
+.answers .layui-card {
+    /* background-color: #e7e7e7; */
+}
+
+.options .layui-card {
+    min-height: 180px;
+}
+
+.answers .layui-card {
+    min-height: 240px;
+}
+
+.u-button {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 70px;
 }
