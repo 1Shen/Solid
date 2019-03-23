@@ -61,7 +61,6 @@ function loadGLTFModel(modelFilePath, hasTexture = false, objectName = '') {
 
     loader.load(modelFileName + '.gltf', function (gltf) {
         var object = gltf.scene;
-        console.log(object)
 
         // 命名
         object.name = objectName ? objectName : modelFileName;
@@ -185,6 +184,17 @@ function rotateAroundPivot(obj, pivot, angle) {
 
 //===============================================================================================
 // (扩展原生js和jquery)
+
+// 遍历打印FormData对象
+function form_dump(form) {
+    var ent = form.entries();
+    var data = {};
+    while (item = ent.next()) {
+        if (item.done) break;
+        data[item.value[0]] = item.value[1];
+    }
+    console.log(data);
+}
 
 // 返回数组中指定元素的下标
 Array.prototype.indexOf = function (val) {
