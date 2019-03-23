@@ -11,100 +11,93 @@
                 @csrf
 
                 <div class="layui-form-item">
-                    <label for="username" class="col-md-4 col-form-label text-md-right">
-                        <!-- {{ __('Name') }} -->
-                        用户名
-                    </label>
+                    <label for="username" class="layui-form-label">
+                        <!-- {{ __('Name') }} -->用户名</label>
 
-                    <div class="col-md-6">
-                        <input id="username" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus>
-
+                    <div class="layui-input-block">
+                        <input id="username" type="text" class="layui-input layui-form-danger {{ $errors->has('name') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus placeholder="请输入用户名">
                         @if ($errors->has('username'))
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $errors->first('username') }}</strong>
                         </span>
                         @endif
                     </div>
+
+                    <label class="layui-form-label label-right"></label>
+                    <div class="blank-2x"></div>
                 </div>
 
-                <div class="form-group row">
-                    <label for="email" class="col-md-4 col-form-label text-md-right">
-                        <!-- {{ __('E-Mail Address') }} -->
-                        邮箱
-                    </label>
+                <div class="layui-form-item">
+                    <label for="email" class="layui-form-label">
+                        <!-- {{ __('E-Mail Address') }} -->邮箱</label>
 
-                    <div class="col-md-6">
-                        <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
+                    <div class="layui-input-block">
+                        <input id="email" type="email" class="layui-input layui-form-danger {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required placeholder="请输入邮箱">
                         @if ($errors->has('email'))
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $errors->first('email') }}</strong>
                         </span>
                         @endif
                     </div>
+
+                    <label class="layui-form-label label-right"></label>
+                    <div class="blank-2x"></div>
                 </div>
 
-                <div class="form-group row">
-                    <label for="password" class="col-md-4 col-form-label text-md-right">
-                        <!-- {{ __('Password') }} -->
-                        密码
-                    </label>
+                <div class="layui-form-item">
+                    <label for="password" class="layui-form-label">
+                        <!-- {{ __('Password') }} -->密码</label>
 
-                    <div class="col-md-6">
-                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
+                    <div class="layui-input-block">
+                        <input id="password" type="password" class="layui-input layui-form-danger {{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="请输入密码">
                         @if ($errors->has('password'))
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $errors->first('password') }}</strong>
                         </span>
                         @endif
                     </div>
+
+                    <label class="layui-form-label label-right"></label>
+                    <div class="blank-2x"></div>
                 </div>
 
-                <div class="form-group row">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">
-                        <!-- {{ __('Confirm Password') }} -->
-                        确认密码
-                    </label>
+                <div class="layui-form-item">
+                    <label for="password-confirm" class="layui-form-label">
+                        <!-- {{ __('Confirm Password') }} -->确认密码</label>
 
-                    <div class="col-md-6">
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                    <div class="layui-input-block">
+                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required placeholder="请确认密码">
                     </div>
+
+                    <label class="layui-form-label label-right"></label>
+                    <div class="blank-2x"></div>
                 </div>
 
-                <div class="form-group row">
-                    <label for="role" class="col-md-4 col-form-label text-md-right">
-                        <!-- {{ __('E-Mail Address') }} -->
-                        身份
-                    </label>
+                <div class="layui-form-item">
+                    <label for="role" class="layui-form-label">
+                        <!-- {{ __('E-Mail Address') }} -->身份</label>
 
-                    <div class="col-md-6" style="padding-top:8px">
+                    <div>
                         <!-- <input style="width:4%" id="role" type="radio" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required> -->
-                        <div id="role">
-                            <label class="radio-inline" style="margin-right:18px">
-                                <input type="radio" name="role" value="0" checked> 学生
-                            </label>
-                            <label class="radio-inline" style="margin-right:18px">
-                                <input type="radio" name="role" value="1"> 教师
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="role" value="2"> 校外人员
-                            </label>
+                        <div id="role" class="layui-input-block">
+                            <input type="radio" name="role" value="0" title="学生" checked>
+                            <input type="radio" name="role" value="1" title="教师">
+                            <input type="radio" name="role" value="2" title="校外人士">
                         </div>
                         <!-- @if ($errors->has('email'))
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $errors->first('email') }}</strong>
                         </span>
                         @endif -->
+
+                        <div class="blank-2x"></div>
                     </div>
                 </div>
 
-                <div class="form-group row mb-0">
-                    <div class="col-md-6 offset-md-4">
-                        <button type="submit" class="btn btn-primary">
-                            {{ __('Register') }}
-                            注册
-                        </button>
+                <div class="layui-form-item">
+                    <div class="layui-input-block btn-blank">
+                        <button type="submit" class="layui-btn">
+                            <!-- {{ __('Register') }} -->注册</button>
                     </div>
                 </div>
             </form>
@@ -120,6 +113,7 @@
     $(function() {
         $('#register-nav').addClass('nav-active');
         navbarBind();
+        $('#username').focus().click();
 
         // Demo
         layui.use('form', function() {

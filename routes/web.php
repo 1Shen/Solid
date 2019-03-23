@@ -35,6 +35,7 @@ Route::get('game', 'GameController@index');
 Route::get('learn', function () {
     return view('home.learn');
 });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -43,4 +44,3 @@ Route::get('register1', function () {
 });
 
 Route::get('quiz', 'QuizController@index');
-

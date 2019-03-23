@@ -55,10 +55,15 @@ body {
     box-shadow: 0 0 20px 0 rgba(47, 64, 86, 0.2), 0 5px 5px 0 rgba(47, 64, 86, 0.25);
 }
 
-.layui-form,
-.btn-blank,
-.layui-input-block,
-.layui-form-label,
-.blank-2x {
-    /* border: 1px red solid; */
+.form-control {
+    /* border: 0.1px; */
+}
+
+.ui-autocomplete,
+.ui-menu,
+.ui-widget-content,
+.ui-corner-all {
+    width: 300px !important;
+    min-width: 200px !important;
+    max-width: 300px !important;
 }

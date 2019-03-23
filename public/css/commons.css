@@ -176,11 +176,13 @@ body::-webkit-scrollbar {
 .dropdown-toggle>img {
     max-height: 17px
 }
+
 .navbar .navbar-nav>.open>a,
 .navbar .navbar-nav>.open>a:focus,
 .navbar .navbar-nav>.open>a:hover {
     background-color: #282C38
 }
+
 /* 自定义鼠标样式 */
 .hand:hover {
     cursor: pointer;

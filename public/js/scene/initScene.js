@@ -190,43 +190,101 @@ function loadModels() {
         fontawesome: "fa fa-cog fa-spin fa-4x fa-fw",
     });
 
-    load3DModel("../../static/models/agate_pestle", false);
-    load3DModel("../../static/models/agate_mortar", false, 'empty-agate_mortar');
+    // load3DModel("../../static/models/agate_pestle", false);
+    loadGLTFModel("/static/models/agate_pestle", false);
+    // load3DModel("../../static/models/agate_mortar", false, 'empty-agate_mortar');
+    loadGLTFModel("/static/models/agate_mortar", false, 'empty-agate_mortar');
+
     load3DModel("../../static/models/press_body", false);
-    load3DModel("../../static/models/press_screw_top", false);
-    load3DModel("../../static/models/press_screw_front", false);
-    load3DModel("../../static/models/press_pointer", false); //sp
+
+    // load3DModel("../../static/models/press_screw_top", false);
+    loadGLTFModel("../../static/models/press_screw_top", false);
+
+    // load3DModel("../../static/models/press_screw_front", false);
+    loadGLTFModel("../../static/models/press_screw_front", false);
+
+    // load3DModel("../../static/models/press_pointer", false); //sp
+    loadGLTFModel("../../static/models/press_pointer", false); //sp
+
     load3DModel("../../static/models/stamper_top", false);
+    // loadGLTFModel("../../static/models/stamper_top", false);
+
     load3DModel("../../static/models/stamper_middle", false, 'empty-stamper_middle');
-    load3DModel("../../static/models/stamper_bottom", false);
+    // loadGLTFModel("../../static/models/stamper_middle", false, 'empty-stamper_middle');
+
+    // load3DModel("../../static/models/stamper_bottom", false);
+    loadGLTFModel("../../static/models/stamper_bottom", false);
+
     load3DModel("../../static/models/tweezers", false);
-    load3DModel("../../static/models/beaker", false, 'sample-beaker');
+    // load3DModel("../../static/models/beaker", false, 'sample-beaker');
+    loadGLTFModel("../../static/models/beaker", false, 'sample-beaker');
+    // load3DModel("../../static/models/KBr-beaker", false);
     load3DModel("../../static/models/KBr-beaker", false);
-    load3DModel("../../static/models/spoon", false, 'empty-spoon');
+
+    // load3DModel("../../static/models/spoon", false, 'empty-spoon');
+    loadGLTFModel("../../static/models/spoon", false, 'empty-spoon');
+
     load3DModel("../../static/models/infrared_analyzer_body", false);
-    load3DModel("../../static/models/infrared_analyzer_cover", false); //sp
-    load3DModel("../../static/models/infrared_analyzer_fix_frame", false);
+    // loadGLTFModel("../../static/models/infrared_analyzer_body", false);
+
+    // load3DModel("../../static/models/infrared_analyzer_cover", false); //sp
+    loadGLTFModel("../../static/models/infrared_analyzer_cover", false); //sp
+
+    // load3DModel("../../static/models/infrared_analyzer_fix_frame", false);
+    loadGLTFModel("../../static/models/infrared_analyzer_fix_frame", false);
+
     load3DModel("../../static/models/experiment_table", false);
-    load3DModel("../../static/models/computer_desk", false);
-    load3DModel("../../static/models/computer", false);
+    // loadGLTFModel("../../static/models/experiment_table", false);
+
+    // load3DModel("../../static/models/computer_desk", false);
+    loadGLTFModel("../../static/models/computer_desk", false);
+    // load3DModel("../../static/models/computer", false);
+    loadGLTFModel("../../static/models/computer", false);
+
 
     // 固体粉末
-    load3DModel("../../static/models/sample_on-spoon", false);
-    load3DModel("../../static/models/KBr_on-spoon", false);
-    load3DModel("../../static/models/mixture_on-spoon", false);
-    load3DModel("../../static/models/product_on-spoon", false);
-    load3DModel("../../static/models/sample_on-agate_mortar", false);
-    load3DModel("../../static/models/KBr_on-agate_mortar", false);
-    load3DModel("../../static/models/mixture_on-agate_mortar", false);
-    load3DModel("../../static/models/product_on-agate_mortar", false);
-    load3DModel("../../static/models/KBr_on-beaker", false);
-    load3DModel("../../static/models/sample_on-beaker", false);
+    // load3DModel("../../static/models/sample_on-spoon", false);
+    loadGLTFModel("../../static/models/sample_on-spoon", false);
 
-    load3DModel("../../static/models/product_on-stamper_middle", false);
-    load3DModel("../../static/models/tablet_on-stamper_middle", false);
+    // load3DModel("../../static/models/KBr_on-spoon", false);
+    loadGLTFModel("../../static/models/KBr_on-spoon", false);
+
+    // load3DModel("../../static/models/mixture_on-spoon", false);
+    loadGLTFModel("../../static/models/mixture_on-spoon", false);
+
+    // load3DModel("../../static/models/product_on-spoon", false);
+    loadGLTFModel("../../static/models/product_on-spoon", false);
+
+    // load3DModel("../../static/models/sample_on-agate_mortar", false);
+    loadGLTFModel("../../static/models/sample_on-agate_mortar", false);
+
+    // load3DModel("../../static/models/KBr_on-agate_mortar", false);
+    loadGLTFModel("../../static/models/KBr_on-agate_mortar", false);
+
+    // load3DModel("../../static/models/mixture_on-agate_mortar", false);
+    loadGLTFModel("../../static/models/mixture_on-agate_mortar", false);
+
+    // load3DModel("../../static/models/product_on-agate_mortar", false);
+    loadGLTFModel("../../static/models/product_on-agate_mortar", false);
+
+    // load3DModel("../../static/models/KBr_on-beaker", false);
+    loadGLTFModel("../../static/models/KBr_on-beaker", false);
+
+    // load3DModel("../../static/models/sample_on-beaker", false);
+    loadGLTFModel("../../static/models/sample_on-beaker", false);
+
+
+    // load3DModel("../../static/models/product_on-stamper_middle", false);
+    loadGLTFModel("../../static/models/product_on-stamper_middle", false);
+
+    // load3DModel("../../static/models/tablet_on-stamper_middle", false);
+    loadGLTFModel("../../static/models/tablet_on-stamper_middle", false);
+
 
     // arrow
-    load3DModel("../../static/models/arrow", false);
+    // load3DModel("../../static/models/arrow", false);
+    loadGLTFModel("/static/models/arrow", false);
+
 }
 
 // 应用入口
