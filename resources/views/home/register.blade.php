@@ -21,7 +21,7 @@
 
                 <div class="col-md-2"></div>
 
-                <div class="form-container col-md-8 edge">
+                <div class="form-container col-md-8">
                     <form class="layui-form" action="">
 
                         <div class="layui-form-item">

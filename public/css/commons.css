@@ -131,7 +131,7 @@ body::-webkit-scrollbar {
 .navbar-cyan .navbar-nav>li>a {
     min-width: 100px;
     text-align: center;
-    color: rgba(255, 255, 255, .7);
+    color: rgba(255, 255, 255, 0.7);
     transition: all .3s;
     -webkit-transition: all .3s
 }
@@ -162,6 +162,25 @@ body::-webkit-scrollbar {
 .navbar-brand {
     color: #ddd;
     letter-spacing: 2px;
+}
+
+.dropdown-toggle {
+    letter-spacing: 1px;
+}
+
+.dropdown-menu {
+    min-width: 100%;
+    margin-left: 0;
+}
+
+.dropdown-toggle>img {
+    max-height: 17px
+}
+
+.navbar .navbar-nav>.open>a,
+.navbar .navbar-nav>.open>a:focus,
+.navbar .navbar-nav>.open>a:hover {
+    background-color: #282C38
 }
 
 /* 自定义鼠标样式 */

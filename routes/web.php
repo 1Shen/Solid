@@ -23,10 +23,10 @@ Route::get('login', function () {
 Route::post('/user/login', 'UserController@login');
 
 // register
-Route::get('register', function () {
-    return view('home.register');
-});
-Route::post('register', 'UserController@register');
+// Route::get('register', function () {
+//     return view('home.register');
+// });
+// Route::post('register', 'UserController@register');
 
 // game
 Route::get('game', 'GameController@index');
@@ -39,8 +39,7 @@ Route::get('learn', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('register', function () {
+Route::get('register1', function () {
     return view('home.register');
 });
 

@@ -82,4 +82,9 @@
         </div>
     </div>
 </div>
+<script>
+    $(function () {
+        $('#login-nav').addClass('nav-active');
+    });
+</script>
 @endsection
