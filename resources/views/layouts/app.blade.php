@@ -19,6 +19,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/css/home/register.css">
 
+
     <!-- <title>{{ config('app.name', 'Laravel') }}</title> -->
     <title>虚拟仿真实验</title>
 </head>

@@ -19,6 +19,10 @@ body {
     text-indent: 16px;
 }
 
+.layui-form-switch {
+    height: 24.4px;
+}
+
 .btn-blank {
     margin: 0;
     padding-right: 0;
@@ -50,13 +54,16 @@ body {
     padding-bottom: 32px;
 }
 
+.lalink {
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
 .form-container {
     background-color: rgb(238, 238, 238);
     box-shadow: 0 0 20px 0 rgba(47, 64, 86, 0.2), 0 5px 5px 0 rgba(47, 64, 86, 0.25);
-}
-
-.form-control {
-    /* border: 0.1px; */
 }
 
 .ui-autocomplete,
