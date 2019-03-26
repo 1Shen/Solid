@@ -11,49 +11,51 @@
     <!-- <link rel="stylesheet" href="/lib/layui/css/layui.css">
     <script src="/lib/layui/layui.js"></script> -->
 
-    <title>习题</title>
+    <title>虚拟仿真实验——习题测试</title>
 </head>
 
 <body>
     @include('template.nav')
 
     <!-- 红外光谱背景 -->
-    <div id="map-bg">
-        <div class="img-box">
-            <img class="bg" src="/static/images/bg/map/0_0.png" alt="">
-            <div class="gif">
-                <img src="" alt="">
+    <div id="main">
+        <div id="map-bg">
+            <div class="img-box">
+                <img class="bg" src="/static/images/bg/map/0_0.png" alt="">
+                <div class="gif">
+                    <img src="" alt="">
+                </div>
+                <div class="introduce"></div>
             </div>
-            <div class="introduce"></div>
-        </div>
-        <div class="quiz-box">
-            <div class="title"></div>
-            <form class="layui-form" action="">
-                <div class="layui-form-item">
-                    <div class="layui-input-block options layui-row">
-                        <div class="layui-col-md6">
-                            <input class="a" type="radio" name="role" value="A" title="A" checked>
-                            <div class="option-bg"><img src="" alt=""></div>
-                        </div>
-                        <div class="layui-col-md6">
-                            <input class="b" type="radio" name="role" value="B" title="B">
-                            <div class="option-bg"><img src="" alt=""></div>
-                        </div>
-                        <div class="layui-col-md6">
-                            <input class="c" type="radio" name="role" value="C" title="C">
-                            <div class="option-bg"><img src="" alt=""></div>
-                        </div>
-                        <div class="layui-col-md6">
-                            <input class="d" type="radio" name="role" value="D" title="D">
-                            <div class="option-bg"><img src="" alt=""></div>
+            <div class="quiz-box">
+                <div class="title"></div>
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <div class="layui-input-block options layui-row">
+                            <div class="layui-col-md6">
+                                <input class="a" type="radio" name="role" value="A" title="A" checked>
+                                <div class="option-bg"><img src="" alt=""></div>
+                            </div>
+                            <div class="layui-col-md6">
+                                <input class="b" type="radio" name="role" value="B" title="B">
+                                <div class="option-bg"><img src="" alt=""></div>
+                            </div>
+                            <div class="layui-col-md6">
+                                <input class="c" type="radio" name="role" value="C" title="C">
+                                <div class="option-bg"><img src="" alt=""></div>
+                            </div>
+                            <div class="layui-col-md6">
+                                <input class="d" type="radio" name="role" value="D" title="D">
+                                <div class="option-bg"><img src="" alt=""></div>
+                            </div>
                         </div>
                     </div>
+                </form>
+                <div class="analysis" style="display: none"></div>
+                <input class="answer" type="hidden">
+                <div class="q-button">
+                    <div class="layui-btn layui-btn-lg">提交</div>
                 </div>
-            </form>
-            <div class="analysis" style="display: none"></div>
-            <input class="answer" type="hidden">
-            <div class="q-button">
-                <div class="layui-btn layui-btn-lg">提交</div>
             </div>
         </div>
     </div>
@@ -101,6 +103,7 @@
                 options = JSON.parse(quizzes[count].options);
                 pic = quizzes[count].pic;
                 title = quizzes[count].title;
+                console.log(title)
 
                 updateQuiz(analysis, answer, options, pic, title);
             }
@@ -119,15 +122,16 @@
             $('.options .c').parent().find('img').attr('src', '{{ asset("storage/") }}' + options.C.img);
             $('.options .d').parent().find('img').attr('src', '{{ asset("storage/") }}' + options.D.img);
             $('.bg').attr('src', '{{ asset("storage/") }}' + pic);
-            $('.title').text(count + ". " + title);
+            $('.title').text(count + "、" + title);
             $('#map-bg').reShow(1000);
         }
 
         $('.q-button div').click(function() {
             var choice = $('.layui-form input:checked').val();
-            if (choice == $('.answer').val()) {
+            if (choice.toLowerCase() == $('.answer').val().toLowerCase()) {
                 layer.msg('回答正确');
             } else {
+
                 layer.msg('回答错误');
                 score = parseInt(score * (1 - minus));
                 $('.analysis').slideDown(400);

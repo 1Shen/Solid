@@ -26,7 +26,7 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-cyan">
+        <nav class="navbar navbar-cyan navbar-fixed-top">
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -71,7 +71,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main style="margin-top:51px" class="py-4">
             @yield('content')
         </main>
     </div>

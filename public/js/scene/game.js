@@ -478,8 +478,9 @@ function grind() {
             animation['grind'].onPlayDone = function () {
                 replaceModel(bowl, "product", "agate_mortar");
                 bowl.sample.children[0].material.color.setHex(0xffffff);
-                bowl.sample.position.y -= 2;
-                bowl.currVal -= 2;
+                bowl.sample.position.y -= 5;
+                bowl.currVal -= 5;
+                bowl.changeable = false;
                 stepComplete(2, 1);
                 missionComplete(mission_step);
             }
@@ -593,7 +594,7 @@ function dropReagent(origin, target) {
 
     if (reagent == 'mixture') {
         let sample = global.object.model['mixture_on-' + strT[1]].modelObject;
-        sample.children[0].material.color.setHex(0xbbbbbb);
+        sample.children[0].material.color.setHex(0xdddddd);
     }
 
     // origin model

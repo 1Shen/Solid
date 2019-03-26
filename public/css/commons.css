@@ -7,10 +7,21 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+#main {
+    margin-top: 51px;
+}
+
+nav .container-fluid{
+    padding: 0px 39px;
+}
 
 /* 自定义边距 */
 .margin-left-1x {
     margin-left: 12px;
+}
+
+.margin-right-1x {
+    margin-right: 12px;
 }
 
 .margin-left-2x {
@@ -161,11 +172,14 @@ body::-webkit-scrollbar {
 
 .navbar-brand {
     color: #ddd;
-    letter-spacing: 2px;
+}
+
+.navbar-brand:hover{
+    color: #fff;
 }
 
 .dropdown-toggle {
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
 }
 
 .dropdown-menu {

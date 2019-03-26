@@ -54,8 +54,13 @@ function initLocation() {
     model.rotation.z = Math.PI / 2;
     model.show(-110, -80, -112);
 
+    // agate_mortar
     var model = global.object.model['empty-agate_mortar'].modelObject;
     model.show(-200, -75, -100);
+
+    // var sample = global.object.model['product_on-agate_mortar'].modelObject;
+    // sample.show(-200, -75, -100);
+
 
     //press
     var model = global.object.model['press_body'].modelObject;

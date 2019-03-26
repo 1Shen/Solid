@@ -158,6 +158,7 @@ $(function () {
                 bowl.currVal = 0;
                 bowl['needKBr'] = 4;
                 bowl['needsample'] = 1;
+                bowl.changeable = true;
             }
         },
         items: {

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="blank-2x"></div>
+<div class="blank-3x"></div>
 
 <div class="container">
     <div class="row">
@@ -96,7 +96,7 @@
 
                 <div class="layui-form-item">
                     <div class="layui-input-block btn-blank">
-                        <button type="submit" class="layui-btn">
+                        <button type="submit" class="layui-btn layui-btn-lg">
                             <!-- {{ __('Register') }} -->注册</button>
                     </div>
                 </div>

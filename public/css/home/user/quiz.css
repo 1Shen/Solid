@@ -1,0 +1,22 @@
+#addQuiz,
+#showQuizzes {
+    padding: 0px 30px;
+    /* padding-right: 18%; */
+    width: 84%;
+}
+
+#addQuiz .form-inline {
+    /* width: 84%; */
+}
+
+.layui-form-label {
+    margin-bottom: 0;
+}
+
+.margin-left-1x {
+    margin-left: 17px;
+}
+
+.margin-left-sm {
+    margin-left: 10px;
+}

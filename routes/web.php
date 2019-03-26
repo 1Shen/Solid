@@ -29,11 +29,15 @@ Route::get('learn', function () {
 
 // quiz
 Route::get('quiz', 'QuizController@index');
-Route::post('quiz/add', 'QuizController@addQuiz')->middleware('filter_empty_values');
 Route::get('quiz/fetch', 'QuizController@fetchQuizzes');
+Route::get('quiz/list', 'QuizController@quizList');
+Route::post('quiz/add', 'QuizController@addQuiz')->middleware('filter_empty_values');
+
 
 // user
 Route::get('user', 'UserController@index');
+Route::get('user/{action}/{op}', 'UserController@index');
+
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

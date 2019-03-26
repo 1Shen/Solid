@@ -34,8 +34,10 @@ body {
 }
 
 .layui-btn {
-    min-width: 100px;
-    margin: 0 50px;
+    font-size: 15px;
+    height: 35.5px;
+    line-height: 35.5px;
+    letter-spacing: 2px;
 }
 
 .label-right {

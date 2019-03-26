@@ -1,5 +1,5 @@
 <nav class="navbar navbar-cyan navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-left">

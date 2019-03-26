@@ -1,5 +1,5 @@
 body {
-    background-color: #e7e7e7;
+    /* background-color: #e7e7e7; */
 }
 
 #nav-side {
@@ -9,11 +9,19 @@ body {
 
 #main {
     position: absolute;
+    top: 51.45px;
     left: 200px;
     right: 0;
+    /* border: 3px solid red; */
+    /* height: 100%; */
+    margin-top: 0;
 }
 
-#main>div {
+.layui-fixbar{
+    right: 10%;
+}
+
+/* #main>div {
     padding: 40px;
     display: flex;
     align-items: center;
@@ -46,7 +54,7 @@ body {
 
 .options .layui-card,
 .answers .layui-card {
-    /* background-color: #e7e7e7; */
+    background-color: #e7e7e7;
 }
 
 .options .layui-card {
@@ -61,4 +69,4 @@ body {
     display: flex;
     justify-content: flex-end;
     padding: 20px 70px;
-}
+} */

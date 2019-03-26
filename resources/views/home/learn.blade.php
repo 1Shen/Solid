@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="/lib/ckin/dist/css/ckin.css">
 
-    <title>虚拟仿真实验——固体红外光谱的测试与分析</title>
+    <title>虚拟仿真实验——课程中心</title>
 
 </head>
 

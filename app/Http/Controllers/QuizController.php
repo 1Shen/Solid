@@ -59,4 +59,22 @@ class QuizController extends Controller
         $quizzes = DB::select("SELECT * FROM quizzes ORDER BY RAND() LIMIT 10");
         return compact('quizzes');
     }
+
+    public function quizList()
+    {
+        $quizzes = DB::select("SELECT * FROM quizzes");
+        foreach ($quizzes as $quiz) {
+            $options = json_decode($quiz->options);
+            $quiz->optionA = $options->A->text;
+            $quiz->optionB = $options->B->text;
+            $quiz->optionC = $options->C->text;
+            $quiz->optionD = $options->D->text;
+        }
+        return response()->json([
+            "code" => 0,
+            "msg" => "",
+            "count" => count($quizzes),
+            "data" => $quizzes
+        ]);
+    }
 }
