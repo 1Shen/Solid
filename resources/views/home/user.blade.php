@@ -50,21 +50,21 @@
 
         @elseif ($user->role == 1)
 
-        @if ($action == 'quiz')
+            @if ($action == 'quiz')
 
-        @if ($op == 'add')
+                @if ($op == 'add')
 
-        @include('home.user.quiz.add')
+                    @include('home.user.quiz.add')
 
-        @elseif ($op == 'edit')
+                @elseif ($op == 'edit')
 
-        @elseif ($op == 'list')
+                @elseif ($op == 'list')
 
-        @include('home.user.quiz.list')
+                    @include('home.user.quiz.list')
 
-        @endif
+                @endif
 
-        @endif
+            @endif
 
         @elseif ($user->role == 0)
 

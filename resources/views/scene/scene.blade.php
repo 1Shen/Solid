@@ -42,6 +42,8 @@
     <link href="https://cdn.jsdelivr.net/npm/busy-load/dist/app.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/busy-load/dist/app.min.js"></script>
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
 </head>
 
 <body onload="start()" oncontextmenu="return false">
@@ -67,6 +69,9 @@
                 <span>评级：</span><span class="text"></span>
             </div>
         </div>
+        <button style="display: none"></button>
+        <input id="username" type="hidden" value="{{ Auth::User()->username }}">
+        <input id="name" type="hidden" value="{{ Auth::User()->name }}">
     </div>
 
     <!-- 红外光谱背景 -->
@@ -258,5 +263,49 @@
     <!-- Listener -->
     <input type="hidden" value="0" id="loadStatusListener" onchange="loadStatusChange()">
 </body>
+
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $(function() {
+        function updateResult() {
+            var form = new FormData();
+            var $div = $('#scorePanel');
+            var faults = [];
+            $('div.error .text').each(function() {
+                faults.push($(this).text());
+            });
+            $.ajax({
+                url: "{{ url('game/submit') }}",
+                type: 'POST',
+                data: {
+                    username: $('#username').val(),
+                    name: $('#name').val(),
+                    time: $div.find('div.time .text').text(),
+                    fault_count: $div.find('div.count .text').text(),
+                    faults: faults,
+                    score: $div.find('div.score .text').text()
+                },
+                dataType: 'json',
+                success: function(res) {
+                    if (res.errCode >= 200) {
+                        // layer.msg('实验结果提交成功');
+                        console.log('实验结果提交成功');
+                    } else {
+                        // layer.msg(res.errMsg);
+                        console.log('实验结果提交失败');
+                    }
+                }
+            });
+        }
+
+        $('#scorePanel button').click(function() {
+            updateResult();
+        });
+    })
+</script>
 
 </html> 

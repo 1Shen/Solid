@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 // game
 Route::get('game', 'GameController@index');
+Route::post('game/submit', 'GameController@submit');
 
 // learn
 Route::get('learn', function () {

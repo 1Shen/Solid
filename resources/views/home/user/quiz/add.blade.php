@@ -144,6 +144,7 @@
             success: function(res) {
                 if (res.errCode >= 200) {
                     layer.msg('上传成功');
+                    console.log(form);
                 } else {
                     layer.msg(res.errMsg);
                 }

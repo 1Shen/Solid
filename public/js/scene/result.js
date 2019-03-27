@@ -146,6 +146,7 @@ function scoreLevel() {
 
 // TODO: 游戏结算（结果展示）
 function displayResult() {
+
     $('#scorePanel .errorList').nextAll().hide();
 
     // 最终得分
@@ -196,12 +197,14 @@ function displayResult() {
 
     $('#scorePanel .count .text').text(count);
     showRecord($('.error').first());
-    // console.log($('.errorList'));
 
     // 分数及评级
     $('#scorePanel .score .text').text(finalScore);
     $('#scorePanel .rank .text').text(rank[0]).append('<sup></sup>');
     $('#scorePanel .rank').find('sup').text(rank[1]);
+
+    // 上传成绩
+    $('#scorePanel button').trigger('click');
 }
 
 // 计时器
