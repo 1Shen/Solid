@@ -49,25 +49,28 @@
 <body onload="start()" oncontextmenu="return false">
 
     <div id="scorePanel">
-        <div class="scroll-panel">
-            <div class="title">实验结果</div>
-            <div class="time">
-                <span>总时长：</span><span class="text"></span>
+        <div class="pricingTable">
+            <div class="pricingTable-header">
+                <div class="title">实验结果</div>
+                <div class="rank">
+                    <span class="text big"></span>
+                </div>
             </div>
-            <div class="count">
-                <span>错误操作个数：</span><span class="text"></span>
+            <div class="price-value">
+                <div class="score">
+                    <span class="text"></span>
+                </div>
             </div>
+            <div class="pricing-content errorList">
+                <div class="time">
+                    <span>总时长：</span><span class="text"></span>
+                </div>
+                <div class="count">
+                    <span>错误操作个数：</span><span class="text"></span>
+                </div>
 
-            <div class="errorList">
             </div>
-
-            <p class="blank-2x"></p>
-            <div class="score">
-                <span>最终得分：</span><span class="text"></span>
-            </div>
-            <div class="rank">
-                <span>评级：</span><span class="text"></span>
-            </div>
+            <a href="{{ url('/') }}" class="pricingTable-signup">回到主页</a>
         </div>
         <button style="display: none"></button>
         <input id="username" type="hidden" value="{{ Auth::User()->username }}">

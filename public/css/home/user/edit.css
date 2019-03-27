@@ -1,0 +1,25 @@
+#edit {
+    padding: 0px 30px;
+    /* padding-right: 18%; */
+    width: 84%;
+    display: flex;
+}
+
+#demo1 {
+    height: 200px;
+    width: 200px;
+}
+
+#right>div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#edit .layui-form-item {
+    margin-bottom: 50px;
+}
+
+#a-btn {
+    display: flex;
+    justify-content: center;
+}

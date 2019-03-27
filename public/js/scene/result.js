@@ -115,12 +115,12 @@ var errorList = {
     "尚未按正确比例混合样品与溴化钾": {
         text: "未按正确比例混合样品与溴化钾即开始研磨",
         score: 7,
-        done: 0
+        done: 1
     },
     "压力值过大": {
         text: "制作装片时加压过大会损坏压模",
         score: 11,
-        done: 0
+        done: 1
     },
     "压力机正处于施压状态": {
         text: "压力机处于施压状态时不能取出压模",
@@ -148,6 +148,7 @@ function scoreLevel() {
 function displayResult() {
 
     $('#scorePanel .errorList').nextAll().hide();
+    $('#scorePanel .score .text').hide();
 
     // 最终得分
     let finalScore = global.system.score * scoreLevel() - minusScore;
@@ -186,9 +187,9 @@ function displayResult() {
     let count = 0;
     for (var name in errorList) {
         if (errorList[name].done) {
-            let error = $('<div class="error"><i class="fa fa-times" aria-hidden="true"></i></div>');
+            let error = $('<div class="error disable"></div>');
             count++;
-            error.find('i').after('<div class="text"></div>')
+            error.append('<div class="text"></div>')
             error.find('.text').text(errorList[name].text);
             $('#scorePanel .errorList').append(error);
             $('#scorePanel .errorList .error').hide();
@@ -283,6 +284,8 @@ function showRecord(div) {
             showRecord(div);
         }, 1000);
     } else {
-        $('#scorePanel .errorList').nextAll().fadeIn(1000);
+        $('#scorePanel .score .text').fadeIn(1000);
+        $('#scorePanel .rank .text').fadeIn(1000);
+        // $('#scorePanel .rank .text').removeClass('big').addClass('small');
     }
 }

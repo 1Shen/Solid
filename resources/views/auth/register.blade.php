@@ -66,7 +66,7 @@
                         <!-- {{ __('Confirm Password') }} -->确认密码</label>
 
                     <div class="layui-input-block">
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required placeholder="请确认密码">
+                        <input id="password-confirm" type="password" class="layui-input layui-form-danger" name="password_confirmation" required placeholder="请确认密码">
                     </div>
 
                     <label class="layui-form-label label-right"></label>
