@@ -40,11 +40,11 @@ body {
 }
 
 #banner a.layui-btn {
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     padding-left: 19px;
-    padding-right: 17px;
+    padding-right: 16px;
     text-decoration: none;
-    font-size: 17.2px;
+    font-size: 17px;
 }
 
 #content .layui-tab {
@@ -121,5 +121,6 @@ body {
 }
 
 .sidebar .content {
+    font-size: 16px;
     margin-bottom: 50px;
 }

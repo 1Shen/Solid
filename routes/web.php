@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 // game
-Route::get('game', 'GameController@index');
+Route::get('game', 'GameController@index')->middleware('auth');
 Route::post('game/submit', 'GameController@submit');
 
 // learn
@@ -29,7 +29,7 @@ Route::get('learn', function () {
 });
 
 // quiz
-Route::get('quiz', 'QuizController@index');
+Route::get('quiz', 'QuizController@index')->middleware('auth');
 Route::get('quiz/fetch', 'QuizController@fetchQuizzes');
 Route::get('quiz/list', 'QuizController@quizList');
 Route::post('quiz/add', 'QuizController@addQuiz')->middleware('filter_empty_values');
@@ -42,7 +42,3 @@ Route::get('user/{action}/{op}', 'UserController@index');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('register1', function () {
-    return view('home.register');
-});

@@ -90,6 +90,7 @@
         }
     });
     $(document).ready(function() {
+
         var animating = false;
 
         function ripple(elem, e) {
@@ -130,4 +131,5 @@
         });
     });
 </script>
+
 </html> 
