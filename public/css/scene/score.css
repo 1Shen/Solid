@@ -1,4 +1,40 @@
-/* TODO: 得分面板 */
+#scorePanel .pricing-content {
+    overflow-y: scroll;
+    width: 100%;
+}
+
+#scorePanel .pricing-content::-webkit-scrollbar {
+    display: none;
+}
+
+#scorePanel .error {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: "镇魂手书";
+    src: url(/static/fonts/字魂24号-镇魂手书.ttf);
+}
+
+#scorePanel .score {
+    font-size: 40px;
+    color: #ee4444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scorePanel .rank {
+    font-size: 25px;
+    color: #515151;
+}
+
+#scorePanel .rank .text {
+    color: #ee4444;
+    font-size: 29.5px;
+}
 
 #scorePanel {
     width: 400px;
@@ -12,92 +48,235 @@
     box-shadow: 0 7px 0 rgb(148, 214, 236), 0 8px 3px rgba(0, 0, 0, 0.2);
     z-index: 999;
     overflow: hidden;
-    padding: 25px;
     display: none;
 }
 
-#scorePanel .scroll-panel {
-    overflow-y: scroll;
-    height: 100%;
-    width: 100%;
+#scprePanel .rank .big {
+    opacity: 0;
+    transform: scale(100, 100);
+    transition: all 10s;
 }
 
-#scorePanel .title {
-    font-size: 25px;
-    line-height: 20px;
-    color: #313131;
-    margin-bottom: 25px;
+#scprePanel .rank .small {
+    opacity: 1;
+    transform: scale(1, 1);
+    transition: all 10s;
+}
+
+.pricingTable {
+    padding-bottom: 10px;
     text-align: center;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
 }
 
-#scorePanel .content {
-    font-size: 17.2px;
-    color: #515151;
-    margin-bottom: 8px;
+.pricingTable:before {
+    content: "";
+    width: 100%;
+    height: 340px;
+    background: #6495ED;
+    position: absolute;
+    top: -150px;
+    left: 0;
+    transform: skewY(-20deg);
 }
 
-#scorePanel .error {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
+.pricingTable .pricingTable-header {
+    padding: 20px 20px 60px;
+    text-align: left;
+    position: relative;
+}
+
+.pricingTable .title {
+    font-size: 25px;
+    font-weight: 600;
+    color: #B2DFEE;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.pricingTable .rank {
+    width: 80px;
+    height: 55px;
+    background: #B2DFEE;
+    padding: 7px 0;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: italic;
+    color: #6495ED;
+    text-align: center;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 1;
+}
+
+.pricingTable .rank:before,
+.pricingTable .rank:after {
+    content: "";
+    width: 57px;
+    height: 57px;
+    background: #B2DFEE;
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%) scaleY(0.5) rotate(45deg);
+}
+
+.pricingTable .rank:after {
+    top: auto;
+    bottom: -28px;
+}
+
+.pricingTable .price-value {
+    display: inline-block;
+    width: 170px;
+    height: 110px;
+    padding: 15px;
+    border: 2px solid #6495ED;
+    border-top: none;
+    border-bottom: none;
+    position: relative;
+}
+
+.pricingTable .price-value:before,
+.pricingTable .price-value:after {
+    content: "";
+    width: 121px;
+    height: 121px;
+    border: 3px solid #6495ED;
+    border-right: none;
+    border-bottom: none;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%) scaleY(0.5) rotate(45deg);
+}
+
+.pricingTable .price-value:after {
+    border-top: none;
+    border-left: none;
+    border-bottom: 3px solid #6495ED;
+    border-right: 3px solid #6495ED;
+    top: auto;
+    bottom: -60px;
+}
+
+.pricingTable .score {
+    width: 100%;
+    height: 100%;
+    background: #B2DFEE;
+    border: 2px solid #6495ED;
+    border-top: none;
+    border-bottom: none;
+    color: #6495ED;
+    z-index: 1;
+    position: relative;
+}
+
+.pricingTable .score:before,
+.pricingTable .score:after {
+    content: "";
+    width: 97px;
+    height: 97px;
+    background: #B2DFEE;
+    border: 3px solid #6495ED;
+    border-bottom: none;
+    border-right: none;
+    position: absolute;
+    top: -48px;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%) scaleY(0.5) rotate(45deg);
+}
+
+.pricingTable .score:after {
+    border-right: 3px solid #6495ED;
+    border-bottom: 3px solid #6495ED;
+    border-top: none;
+    border-left: none;
+    top: auto;
+    bottom: -48px;
+}
+
+.pricingTable .pricing-content {
+    padding: 50px 0 0 80px;
+    margin-bottom: 20px;
+    list-style: none;
+    text-align: left;
+    transition: all 0.3s ease 0s;
+}
+
+.pricingTable .pricing-content>div {
+    padding: 7px 0;
     font-size: 16px;
+    color: #808080;
+    position: relative;
 }
 
-#scorePanel .error i {
-    margin-right: 7px;
-    color: #ee4444;
+.pricingTable .pricing-content>div:before {
+    font-family: fontawesome;
+    text-align: center;
+    color: #B2DFEE;
+    line-height: 25px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: -50px;
 }
 
-#scorePanel .error .text {
-    line-height: 21.4px;
-    height: 22.4px;
+.pricingTable .pricing-content>div.disable:before {
+    content: "\f00d";
+    background: #fe6c6c;
 }
 
-@font-face {
-    font-family: "镇魂手书";
-    src: url(/static/fonts/字魂24号-镇魂手书.ttf);
+.pricingTable .pricing-content>div.time:before {
+    content: "\f017";
+    background: #98c458;
 }
 
-#scorePanel .score {
-    font-size: 25px;
-    color: #515151;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
+.pricingTable .pricing-content>div.count:before {
+    content: "\f06a";
+    background: #98c458;
 }
 
-#scorePanel .score .text {
-    color: #ee4444;
-    font-size: 29.5px;
-    /* letter-spacing: -7px; */
-    /* font-family: "镇魂手书"; */
+
+.pricingTable .pricingTable-signup {
+    display: inline-block;
+    width: 60%;
+    height: 60px;
+    line-height: 50px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    color: #6495ED;
+    text-transform: uppercase;
+    border: 2px solid #6495ED;
+    margin: 0 auto 10px;
+    position: relative;
+    transition: all 0.3s ease 0s;
 }
 
-#scorePanel .rank {
-    font-size: 25px;
-    color: #515151;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
+.pricingTable .pricingTable-signup:hover {
+    background: #6495ED;
+    color: #B2DFEE;
 }
 
-#scorePanel .rank .text {
-    color: #ee4444;
-    font-size: 29.5px;
+@media only screen and (max-width: 990px) {
+    .pricingTable {
+        margin-bottom: 30px;
+    }
 }
 
-#scorePanel .blank-1x {
-    width: 100%;
-    height: 4px;
-    margin: 0;
-}
+@media only screen and (max-width: 767px) {
+    .pricingTable:before {
+        transform: skewY(-15deg);
+    }
 
-#scorePanel .blank-2x {
-    width: 100%;
-    height: 14.5px;
-    margin: 0;
-}
-
-#scorePanel .scroll-panel::-webkit-scrollbar {
-    display: none;
+    .pricingTable .title {
+        font-size: 22px;
+    }
 }

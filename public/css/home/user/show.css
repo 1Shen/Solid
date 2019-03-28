@@ -1,0 +1,26 @@
+
+#show .banner {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+#show .avatar {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+}
+
+#show {
+    background-color: #eeeeee;
+    padding-bottom: 30px;
+}
+
+#show .container {
+    margin-top: 25px;
+    background-color: #fff;
+}

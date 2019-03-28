@@ -8,6 +8,8 @@
     <script src="/js/scene/utils.js"></script>
     <link rel="stylesheet" href="/css/home/user.css">
     <link rel="stylesheet" href="/css/home/user/quiz.css">
+    <link rel="stylesheet" href="/css/home/user/edit.css">
+    <link rel="stylesheet" href="/css/home/user/show.css">
 </head>
 
 <body ng-app="">
@@ -44,31 +46,40 @@
     </ul>
 
     <div id="main">
-        @if ($user->role == 2)
+        @if ($action == 'info')
 
-        校外人士
+        @if ($op == 'show')
 
-        @elseif ($user->role == 1)
+        @include('home.user.info.show')
 
-            @if ($action == 'quiz')
+        @elseif ($op == 'edit')
 
-                @if ($op == 'add')
+        @include('home.user.info.edit')
 
-                    @include('home.user.quiz.add')
+        @endif
 
-                @elseif ($op == 'edit')
+        @endif
 
-                @elseif ($op == 'list')
 
-                    @include('home.user.quiz.list')
+        @if ($user->role == 1)
 
-                @endif
+        @if ($action == 'quiz')
 
-            @endif
+        @if ($op == 'add')
 
-        @elseif ($user->role == 0)
+        @include('home.user.quiz.add')
 
-        学生
+        @elseif ($op == 'edit')
+
+        @elseif ($op == 'list')
+
+        @include('home.user.quiz.list')
+
+        @endif
+
+        @endif
+
+        @else
 
         @endif
 
@@ -103,9 +114,88 @@
                 console.log(data);
             });
         });
-        // layer模块
+
         layui.use('layer', function() {
             layer = layui.layer;
+        });
+
+        layui.use('table', function() {
+            var table = layui.table;
+
+            table.render({
+                elem: '#test',
+                url: "{{ url('quiz/list') }}",
+                toolbar: '#toolbarDemo',
+                title: '用户数据表',
+                cols: [
+                    [{
+                        type: 'checkbox',
+                        fixed: 'left'
+                    }, {
+                        field: 'id',
+                        title: 'ID',
+                        width: 65,
+                        fixed: 'left',
+                        unresize: true,
+                        sort: true
+                    }, {
+                        field: 'title',
+                        title: '题目',
+                        width: 300
+                    }, {
+                        field: 'optionA',
+                        title: '选项A',
+                        width: 100,
+                        edit: 'text'
+                    }, {
+                        field: 'optionB',
+                        title: '选项B',
+                        width: 100,
+                        edit: 'text'
+                    }, {
+                        field: 'optionC',
+                        title: '选项C',
+                        width: 100,
+                        edit: 'text'
+                    }, {
+                        field: 'optionD',
+                        title: '选项D',
+                        width: 100,
+                        edit: 'text'
+                    }, {
+                        field: 'answer',
+                        title: '答案',
+                        width: 65,
+                    }, {
+                        field: 'analysis',
+                        title: '答案解析',
+                        width: 200
+                    }]
+                ],
+                page: true
+            });
+
+            //监听行工具事件
+            table.on('tool(test)', function(obj) {
+                var data = obj.data;
+                //console.log(obj)
+                if (obj.event === 'del') {
+                    layer.confirm('真的删除行么', function(index) {
+                        obj.del();
+                        layer.close(index);
+                    });
+                } else if (obj.event === 'edit') {
+                    layer.prompt({
+                        formType: 2,
+                        value: data.email
+                    }, function(value, index) {
+                        obj.update({
+                            email: value
+                        });
+                        layer.close(index);
+                    });
+                }
+            });
         });
     });
 </script>
