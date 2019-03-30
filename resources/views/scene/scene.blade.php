@@ -281,6 +281,7 @@
             $('div.error .text').each(function() {
                 faults.push($(this).text());
             });
+            faults.length == 0 ? faults = [""] : null;
             $.ajax({
                 url: "{{ url('game/submit') }}",
                 type: 'POST',

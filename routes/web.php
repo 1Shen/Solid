@@ -38,6 +38,7 @@ Route::post('quiz/add', 'QuizController@addQuiz')->middleware('filter_empty_valu
 // user
 Route::get('user', 'UserController@index');
 Route::get('user/{action}/{op}', 'UserController@index');
+Route::get('info/show', 'UserController@resultList');
 
 
 Auth::routes();
