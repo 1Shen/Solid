@@ -99,20 +99,18 @@
                     <div class="sidebar">
                         <div class="title">教师简介</div>
                         <div class="avatar">
-                            <img src="{{ asset('storage') . '/default.jpg' }}" alt="">
+                            <img src="/static/images/img/teacher.png" alt="">
                         </div>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
+                        <div style="margin-top:15px" class="content">
+                            暂无介绍
+                        </div>
 
                         <div class="title">联系我们</div>
                         <div class="content">
-                            <p>QQ：123456</p>
+                            <p>QQ：592798651</p>
                             <p>邮箱：123456@qq.com</p>
+                            <p>公众号：xxxxx</p>
                         </div>
-                        <div class="title">其他</div>
                     </div>
                 </div>
             </div>

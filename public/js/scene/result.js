@@ -59,8 +59,9 @@ $(function () {
             $('.pageTurnBtn .pageRight').text('查看分数');
             $('.pageTurnBtn .pageRight')[0].onmousedown = function () {
                 $('#map-bg').addClass('narrow').removeClass('largen');
-
-                displayResult();
+                setTimeout(() => {
+                    displayResult();
+                }, 1000);
                 $('#scorePanel').fadeIn(1500);
             }
         } else {
@@ -102,10 +103,10 @@ var minusScore = 0;
  * 玩家最终得分 = 100 * 评级 - 总扣分 
  */
 var level = {
-    "10": 1,
-    "20": 0.9,
-    "30": 0.8,
-    "40": 0.7
+    "180": 1,
+    "220": 0.9,
+    "260": 0.8,
+    "300": 0.7
 }
 
 // 错误列表
@@ -114,17 +115,17 @@ var errorList = {
 
     "尚未按正确比例混合样品与溴化钾": {
         text: "未按正确比例混合样品与溴化钾即开始研磨",
-        score: 7,
+        score: 2,
         done: 0
     },
     "压力值过大": {
         text: "制作装片时加压过大会损坏压模",
-        score: 11,
+        score: 5,
         done: 0
     },
     "压力机正处于施压状态": {
         text: "压力机处于施压状态时不能取出压模",
-        score: 13,
+        score: 2,
         done: 0
     }
 }
@@ -140,15 +141,18 @@ function scoreLevel() {
         }
     }
 
-    return 0.1;
+    return 0.6;
 }
 
-
+var fadeInTime = 1100;
+var fadeInWaitTime = 600;
 // TODO: 游戏结算（结果展示）
 function displayResult() {
 
-    $('#scorePanel .errorList').nextAll().hide();
+    // $('#scorePanel .errorList').nextAll().hide();
+    // $('.pricingTable a').hide();
     $('#scorePanel .score .text').hide();
+    $('#scorePanel .rank .text').hide();
 
     // 最终得分
     let finalScore = global.system.score * scoreLevel() - minusScore;
@@ -176,7 +180,7 @@ function displayResult() {
     } else if (finalScore >= 60) {
         rank = "D-";
     } else {
-        rank = "E";
+        rank = "E ";
     }
 
     // TODO: 结果展示
@@ -197,12 +201,19 @@ function displayResult() {
     }
 
     $('#scorePanel .count .text').text(count);
-    showRecord($('.error').first());
+
+
+    $('#scorePanel .time').fadeIn(fadeInTime);
+    setTimeout(() => {
+        $('#scorePanel .count').fadeIn(fadeInTime);
+        setTimeout(() => {
+            showRecord($('.error').first());
+        }, fadeInWaitTime);
+    }, fadeInWaitTime);
 
     // 分数及评级
     $('#scorePanel .score .text').text(finalScore);
-    $('#scorePanel .rank .text').text(rank[0]).append('<sup></sup>');
-    $('#scorePanel .rank').find('sup').text(rank[1]);
+    $('#scorePanel .rank .text').text(rank[0]).append("<sup>" + rank[1] + "</sup>");
 
     // 上传成绩
     $('#scorePanel button').trigger('click');
@@ -278,14 +289,19 @@ function recordError(name) {
 // 显示记录
 function showRecord(div) {
     if (div.hasClass('error')) {
-        div.fadeIn(1500);
+        div.fadeIn(fadeInTime);
         div = div.next();
         setTimeout(function () {
             showRecord(div);
-        }, 1000);
+        }, fadeInWaitTime);
     } else {
-        $('#scorePanel .score .text').fadeIn(1000);
-        $('#scorePanel .rank .text').fadeIn(1000);
+        $('#scorePanel .score .text').fadeIn(fadeInTime);
+        setTimeout(() => {
+            $('#scorePanel .rank .text').fadeIn(fadeInTime);
+            setTimeout(() => {
+                $('#scorePanel .return-btn').fadeIn(fadeInTime);
+            }, fadeInWaitTime);
+        }, fadeInWaitTime);
         // $('#scorePanel .rank .text').removeClass('big').addClass('small');
     }
 }

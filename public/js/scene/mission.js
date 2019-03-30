@@ -143,6 +143,7 @@ const guide = [{
                     if (isConfirm) {
                         mission_start = true;
                         showMissonMsg('获取待测样品');
+                        $('.cpt-toast').hide();
                     }
                 });
             }

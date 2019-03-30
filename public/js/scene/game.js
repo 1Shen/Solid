@@ -31,7 +31,7 @@ const property = {
     // 玛瑙钵杵
     'agate_pestle': {
         count: 0,
-        maxCount: 1, //reset 3
+        maxCount: 3, //reset 3
         pickable: true,
         tooltipTitle: "玛瑙钵杵",
         tooltipContent: "用于研磨"
@@ -198,8 +198,8 @@ var action = {
 
                 animation['spoon_fetch'].play(beaker.position.x + 6, beaker.position.y + 50, beaker.position.z);
 
-                if (guide[guide_step] && guide[guide_step].done == false) {
-                    guide[guide_step].do();
+                if (guide[2] && guide[2].done == false) {
+                    guide[2].do();
                 }
             }
         },
@@ -256,9 +256,8 @@ var action = {
         "sample-beaker": {
             do: function () {
                 dropReagent('sample-spoon', 'sample-beaker');
-                if (guide[guide_step] && guide[guide_step].done == false) {
-                    guide[guide_step].do();
-                    // console.log(guide_step)
+                if (guide[3] && guide[3].done == false) {
+                    guide[3].do();
                 }
             }
         },
@@ -531,7 +530,9 @@ function placeMiddleOnBottom() {
                     closeMagnifier();
 
                     stepComplete(3, 1);
-                    missionComplete(mission_step);
+                    if (mission_step == 3) {
+                        missionComplete(mission_step);
+                    }
                 }
             });
         };
@@ -883,8 +884,8 @@ function placeItem(event) {
         sound['placeItem'].play();
         dropItem();
 
-        if (guide[guide_step] && guide[guide_step].done == false) {
-            guide[guide_step].do(itemName);
+        if (guide[4] && guide[4].done == false && guide_step == 4) {
+            guide[4].do(itemName);
         }
     }
 }

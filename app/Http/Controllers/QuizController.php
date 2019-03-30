@@ -56,7 +56,7 @@ class QuizController extends Controller
 
     public function fetchQuizzes()
     {
-        $quizzes = DB::select("SELECT * FROM quizzes ORDER BY RAND() LIMIT 10");
+        $quizzes = DB::select("SELECT * FROM quizzes ORDER BY RAND() LIMIT 5");
         return compact('quizzes');
     }
 

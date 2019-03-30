@@ -62,15 +62,16 @@
                 </div>
             </div>
             <div class="pricing-content errorList">
-                <div class="time">
+                <div class="time" style="display:none">
                     <span>总时长：</span><span class="text"></span>
                 </div>
-                <div class="count">
+                <div class="count" style="display:none">
                     <span>错误操作个数：</span><span class="text"></span>
                 </div>
-
             </div>
-            <a href="{{ url('/') }}" class="pricingTable-signup">回到主页</a>
+            <div class="return-btn" style="display:none">
+                <a href="{{ url('/') }}" class="pricingTable-signup">回到主页</a>
+            </div>
         </div>
         <button style="display: none"></button>
         <input id="username" type="hidden" value="{{ Auth::User()->username }}">

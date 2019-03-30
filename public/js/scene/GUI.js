@@ -97,7 +97,7 @@ $(function () {
         pause();
         $('#textTip').fadeIn(400);
         sound['mouseClick'] ? sound['mouseClick'].play() : null;
-        minusScore += 5;
+        minusScore += 1;
         console.log(minusScore);
     });
 
@@ -179,8 +179,8 @@ $(function () {
             // TODO: 物品栏上方显示当前选中物品的名字（渐入渐出？）
             $('#inventory').find('.text').text(zn_CH[_this.data('name')]);
 
-            if (guide[guide_step] && guide[guide_step].done == false) {
-                guide[guide_step].do(_this.data('name'));
+            if (guide[1] && guide[1].done == false) {
+                guide[1].do(_this.data('name'));
             }
 
         } else {
@@ -394,8 +394,8 @@ function setItemImage($div, itemName, showMsg = true) {
     }
 
     // 判断游戏引导进度
-    if (guide[guide_step] && guide[guide_step].done == false) {
-        guide[guide_step].do(itemName);
+    if (guide[0] && guide[0].done == false) {
+        guide[0].do(itemName);
     }
 }
 

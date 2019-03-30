@@ -98,7 +98,7 @@
 
                             <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
 
-                            <div class="layui-timeline-content layui-text">
+                            <div class="layui-timeline-content layui-text" onClick="finishLearn()">
                                 <h3 class="layui-timeline-title" data-video="5">完成</h3>
                             </div>
 
@@ -119,8 +119,8 @@
                     <video src="/static/videos/step4.mp4" data-ckin="default" data-overlay="2" data-title="固体红外光谱的测试与分析"></video>
                 </div>
                 <div id="video5" class="video-container col-md-9">
-                    <a href="{{ url('game') }}" class="layui-btn layui-btn-lg">开始实验</a>
-                    <a style="margin-left: 30px" href="{{ url('game') }}" class="layui-btn layui-btn-lg">课后练习</a>
+                    <!-- <a href="{{ url('game') }}" class="layui-btn layui-btn-lg">开始实验</a>
+                    <a style="margin-left: 30px" href="{{ url('game') }}" class="layui-btn layui-btn-lg">课后练习</a> -->
                 </div>
             </div>
         </div>
@@ -140,6 +140,20 @@
             var element = layui.element;
         });
     });
+
+    function finishLearn() {
+        swal({
+            title: '你已完成课程学习部分',
+            text: "接下来开启虚拟仿真实验之旅吧！",
+            type: 'success',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: '开始实验',
+        }).then(function(isConfirm) {
+            if (isConfirm) {
+                window.location.href = "{{ url('game') }}";
+            }
+        });
+    }
 </script>
 
 </html> 

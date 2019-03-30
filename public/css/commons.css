@@ -11,7 +11,7 @@ body::-webkit-scrollbar {
     margin-top: 51px;
 }
 
-nav .container-fluid{
+nav .container-fluid {
     padding: 0px 39px;
 }
 
@@ -174,7 +174,7 @@ nav .container-fluid{
     color: #ddd;
 }
 
-.navbar-brand:hover{
+.navbar-brand:hover {
     color: #fff;
 }
 
@@ -189,6 +189,10 @@ nav .container-fluid{
 
 .dropdown-toggle>img {
     max-height: 17px
+}
+
+#dropdown-nav>a {
+    letter-spacing: 1.5px;
 }
 
 .navbar .navbar-nav>.open>a,
@@ -223,7 +227,7 @@ nav .container-fluid{
 }
 
 #footer {
-    margin-top: 100px;
+    margin-top: 80px;
     font-size: 15px;
     color: #777;
     line-height: 19px;
