@@ -19,21 +19,24 @@
 }
 
 #scorePanel .score {
-    font-size: 40px;
-    color: #ee4444;
+    font-size: 45px;
+    /* color: #ee4444; */
+    color: #FFB800;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 #scorePanel .rank {
-    font-size: 25px;
-    color: #515151;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #scorePanel .rank .text {
-    color: #ee4444;
-    font-size: 29.5px;
+    margin-left: 6px;
+    color: #FFB800;
+    font-size: 36.5px;
 }
 
 #scorePanel {
@@ -94,6 +97,7 @@
     color: #B2DFEE;
     text-transform: uppercase;
     margin: 0;
+    text-indent: 9px;
 }
 
 .pricingTable .rank {
@@ -102,14 +106,15 @@
     background: #B2DFEE;
     padding: 7px 0;
     font-size: 15px;
-    font-weight: 600;
-    font-style: italic;
+    font-weight: 400;
+    /* font-style: italic; */
     color: #6495ED;
     text-align: center;
     position: absolute;
     top: 30px;
     right: 20px;
     z-index: 1;
+    margin-top: 10px;
 }
 
 .pricingTable .rank:before,
@@ -203,7 +208,8 @@
 
 .pricingTable .pricing-content {
     padding: 50px 0 0 80px;
-    margin-bottom: 20px;
+    margin-top: 13px;
+    margin-bottom: 25px;
     list-style: none;
     text-align: left;
     transition: all 0.3s ease 0s;
@@ -211,8 +217,8 @@
 
 .pricingTable .pricing-content>div {
     padding: 7px 0;
-    font-size: 16px;
-    color: #808080;
+    font-size: 16.8px;
+    color: #707070;
     position: relative;
 }
 
@@ -226,6 +232,7 @@
     height: 25px;
     position: absolute;
     left: -50px;
+    margin-top: 0.5px;
 }
 
 .pricingTable .pricing-content>div.disable:before {

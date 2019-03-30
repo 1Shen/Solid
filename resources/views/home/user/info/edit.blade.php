@@ -5,7 +5,7 @@
             <li lay-id="avatar" class="">头像</li>
             <li lay-id="pass" class="">密码</li>
         </ul>
-        <div class="layui-tab-content" style="padding: 20px 0;">
+        <div class="layui-tab-content" style="padding: 27px 0;">
             <div class="layui-form layui-form-pane layui-tab-item layui-show">
                 <form method="">
                     <div class="layui-form-item"> <label for="L_email" class="layui-form-label">邮箱</label>
@@ -15,7 +15,7 @@
                         <div class="layui-input-inline"> <input type="text" id="L_username" name="username" required="" lay-verify="required" autocomplete="off" value="{{ Auth::User()->name }}" class="layui-input"> </div>
                         <div class="layui-form-mid layui-word-aux">请正确填写姓名</div>
                     </div>
-                    <div class="layui-form-item layui-form-text"> <label for="L_sign" class="layui-form-label">签名</label>
+                    <div class="layui-form-item layui-form-text"> <label for="L_sign" class="layui-form-label">个性签名</label>
                         <div class="layui-input-block"> <textarea placeholder="随便写些什么刷下存在感" id="L_sign" name="sign" autocomplete="off" class="layui-textarea" style="height: 80px;"></textarea> </div>
                     </div>
                     <div class="layui-form-item"> <button class="layui-btn" key="set-mine" lay-filter="*" lay-submit="">确认修改</button> </div>
@@ -27,7 +27,7 @@
                         <div class="layui-upload-list" id="image-holder">
                             <img class="layui-upload-img" id="demo1">
                             <p id="demoText">推荐上传正方形图片</p>
-                            <button type="button" class="layui-btn" id="test1">上传图片</button>
+                            <button type="button" class="layui-btn layui-btn-normal" id="test1">上传图片</button>
                         </div>
                     </div>
                 </div>

@@ -97,7 +97,7 @@ $(function () {
         pause();
         $('#textTip').fadeIn(400);
         sound['mouseClick'] ? sound['mouseClick'].play() : null;
-        minusScore += 5;
+        minusScore += 1;
         console.log(minusScore);
     });
 

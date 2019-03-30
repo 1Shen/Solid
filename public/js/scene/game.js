@@ -31,7 +31,7 @@ const property = {
     // 玛瑙钵杵
     'agate_pestle': {
         count: 0,
-        maxCount: 1, //reset 3
+        maxCount: 3, //reset 3
         pickable: true,
         tooltipTitle: "玛瑙钵杵",
         tooltipContent: "用于研磨"
@@ -530,7 +530,9 @@ function placeMiddleOnBottom() {
                     closeMagnifier();
 
                     stepComplete(3, 1);
-                    missionComplete(mission_step);
+                    if (mission_step == 3) {
+                        missionComplete(mission_step);
+                    }
                 }
             });
         };
@@ -882,7 +884,7 @@ function placeItem(event) {
         sound['placeItem'].play();
         dropItem();
 
-        if (guide[4] && guide[4].done == false) {
+        if (guide[4] && guide[4].done == false && guide_step == 4) {
             guide[4].do(itemName);
         }
     }
