@@ -152,6 +152,18 @@ const guide = [{
 ];
 
 
+// 完成游戏引导
+function guideComplete(step, param = null) {
+    if (guide[guide_step] && guide[guide_step].done == false && guide_step == step) {
+        if (param) {
+            guide[step].do(param);
+        } else {
+            guide[step].do();
+        }
+    }
+}
+
+
 // tip初始化
 function initTip() {
     $('.tip-body').scroll(function () {
