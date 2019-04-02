@@ -198,9 +198,10 @@ var action = {
 
                 animation['spoon_fetch'].play(beaker.position.x + 6, beaker.position.y + 50, beaker.position.z);
 
-                if (guide[2] && guide[2].done == false) {
-                    guide[2].do();
-                }
+                // if (guide[2] && guide[2].done == false) {
+                //     guide[2].do();
+                // }
+                guideComplete(2);
             }
         },
 
@@ -256,9 +257,10 @@ var action = {
         "sample-beaker": {
             do: function () {
                 dropReagent('sample-spoon', 'sample-beaker');
-                if (guide[3] && guide[3].done == false) {
-                    guide[3].do();
-                }
+                // if (guide[3] && guide[3].done == false) {
+                //     guide[3].do();
+                // }
+                guideComplete(3);
             }
         },
 
@@ -884,9 +886,10 @@ function placeItem(event) {
         sound['placeItem'].play();
         dropItem();
 
-        if (guide[4] && guide[4].done == false && guide_step == 4) {
-            guide[4].do(itemName);
-        }
+        // if (guide[4] && guide[4].done == false && guide_step == 4) {
+        //     guide[4].do(itemName);
+        // }
+        guideComplete(4, itemName);
     }
 }
 
