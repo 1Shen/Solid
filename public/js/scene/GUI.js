@@ -485,6 +485,13 @@ function pause() {
 
     if (menu_shown == null) {
         $('#title').show();
+        let w = window.innerHeight - $('body')[0].offsetHeight;
+        $('div.search-group').each(function () {
+            let h = $(this).css('bottom');
+
+            $(this).css('bottom', parseFloat(h) + w + "px");
+        });
+        $('#btnSearch').css('bottom', w + "px");
     }
 }
 // 继续游戏
