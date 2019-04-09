@@ -138,9 +138,9 @@
         </div>
     </div>
 
-    <div id="progress-bar" class="layui-progress layui-progress-big" lay-showpercent="false">
+    <!-- <div id="progress-bar" class="layui-progress layui-progress-big" lay-showpercent="false">
         <div class="layui-progress-bar layui-bg-red" lay-percent=""></div>
-    </div>
+    </div> -->
 
     <!-- 放大镜 -->
     <i onclick="openSearch()" class="fa fa-search button-raised button-circle button-jumbo" id="btnSearch" aria-hidden="true" style="display:none"></i>

@@ -290,7 +290,7 @@ function loadModels() {
 // 应用入口
 function start() {
 
-    changeProgressBar();
+    // changeProgressBar();
     initScene();
     initRoom();
     loadModels();
