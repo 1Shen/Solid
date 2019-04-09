@@ -88,7 +88,7 @@ function initCameraToPCAnime() {
         }).start();
     }
 
-    model.trigger = animation['camera_to_pc'].play
+    // model.trigger = animation['camera_to_pc'].play
 }
 
 //===============================================================================================
