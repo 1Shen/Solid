@@ -185,7 +185,8 @@ function loadModels() {
     // 打开遮罩层
     $('#canvas').busyLoad('show', {
         background: '#6495ED',
-        text: "Loading Models...",
+        // text: "Loading Models...",
+        text: "模型加载时间较长，请耐心等待...",
         fontSize: "25px",
         fontawesome: "fa fa-cog fa-spin fa-4x fa-fw",
     });
