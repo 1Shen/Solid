@@ -470,6 +470,11 @@ function grind() {
 
         bar.count++;
         console.log("研磨进度: " + bar.count + "/" + 3);
+        spop({
+            template: "研磨进度: " + bar.count + "/" + 3,
+            style: 'info',
+            autoclose: 3500
+        });
 
         animation['grind'].onPlayDone = function () {
             stepComplete(2, 0);
@@ -489,6 +494,7 @@ function grind() {
     }
 
     animation['grind'].play();
+    sound['grind'].play();
 }
 
 // 压模中部放在底部上
@@ -538,6 +544,18 @@ function placeMiddleOnBottom() {
                 }
             });
         };
+
+        swal({
+            title: '已将粉末倒入模孔',
+            text: "请继续组装压模",
+            type: 'success',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: '好的',
+        }).then(function (isConfirm) {
+            if (isConfirm) {
+                
+            }
+        });
     };
 
     middle.onHide = function () {

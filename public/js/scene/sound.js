@@ -43,6 +43,10 @@ const sound = {
 
     selectItem: {
         name: "SelectItem_01.mp3"
+    },
+
+    grind: {
+        name: "Grind.mp3"
     }
 
     // TODO: other game sounds
@@ -78,7 +82,10 @@ $(function () {
     loadGameSound('button_01');
 
     // 选中物品音
-    loadGameSound('selectItem')
+    loadGameSound('selectItem');
+
+    // 研磨音
+    loadGameSound('grind');
 
     // TODO: other game sounds to be loaded here
 })

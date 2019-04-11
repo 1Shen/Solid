@@ -14,6 +14,17 @@ $(function () {
             if (key == 'divide') {
                 let stamper = global.object.model['stamper'].modelObject;
                 divideModels(stamper);
+                swal({
+                    title: '压模已拆分',
+                    text: "现在可以单独拾取压模的每一个部件",
+                    type: 'success',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: '好的',
+                }).then(function (isConfirm) {
+                    if (isConfirm) {
+
+                    }
+                });
             }
         },
         items: {

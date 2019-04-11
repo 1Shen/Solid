@@ -74,7 +74,7 @@
 
         swal({
             title: '请先登录',
-            text: "<div>教师账号：TEA0316</div><div>教师密码：123456789</div><div>学生账号：STU0316</div><div>学生密码：123456789</div>",
+            text: "<div>教师账号：TEA0316</div><div>教师密码：123456789</div><br><div>学生账号：STU0316</div><div>学生密码：123456789</div>",
             type: 'warning',
             confirmButtonColor: '#3085d6',
             confirmButtonText: '确定',

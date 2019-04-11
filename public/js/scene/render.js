@@ -66,5 +66,16 @@ function loadStatusChange() {
 
         showMainMenu();
         menu_shown = null;
+
+        swal({
+            title: '打开音量，获得更好的体验',
+            type: 'info',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: '好',
+        }).then(function (isConfirm) {
+            if (isConfirm) {
+
+            }
+        });
     }
 }
