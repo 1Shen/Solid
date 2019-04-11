@@ -23,20 +23,23 @@ function render() {
 
 }
 
-function changeProgressBar() {
-    var n = 0;
-    var m = parseInt($('#loadStatusListener').val() / TOTAL_MODEL_NUM * 100) + 1;
-    var timer = setInterval(function () {
-        n++;
-        if (n > 100) {
-            n = 100;
-            clearInterval(timer);
-        } else if (n > m) {
-            n = m;
-        }
-        $('#progress-bar div').css('width', n + "%");
-    }, 100);
-}
+// function changeProgressBar() {
+//     // var n = 0;
+//     // var m = parseInt($('#loadStatusListener').val() / TOTAL_MODEL_NUM * 100) + 1;
+//     // var timer = setInterval(function () {
+//     //     n++;
+//     //     if (n > 100) {
+//     //         n = 100;
+//     //         clearInterval(timer);
+//     //     } else if (n > m) {
+//     //         n = m;
+//     //     }
+//     //     $('#progress-bar div').css('width', n + "%");
+//     // }, 100);
+//     $('#progress-bar div').animate({
+//         width: '100%'
+//     }, 30000);
+// }
 
 // 监听模型加载的进度
 function loadStatusChange() {
