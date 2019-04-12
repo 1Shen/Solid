@@ -23,6 +23,9 @@
                 </div>
                 <a class="layui-btn layui-btn-lg" href="{{ url('game') }}">开始实验</a>
                 <a style="margin-left: 17px" class="layui-btn layui-btn-lg" href="{{ url('learn') }}">先去学习</a>
+                <div class="user_doc">
+                    <a href="/static/files/实验操作手册.docx" download="" title="下载" mce_href="#">点击下载：实验操作手册</a>
+                </div>
             </div>
         </div>
         <div id="content" class="container">
@@ -136,4 +139,4 @@
     })
 </script>
 
-</html> 
+</html>

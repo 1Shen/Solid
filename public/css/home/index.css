@@ -124,3 +124,19 @@ body {
     font-size: 16px;
     margin-bottom: 50px;
 }
+
+.user_doc {
+    margin-top: 15px;
+    color: blue;
+}
+
+.user_doc a {
+    color: blue;
+    font-size: 17.2px;
+    transition: 0.4s;
+}
+
+.user_doc a:hover {
+    color: #1E9FFF;
+    text-decoration: underline;
+}
