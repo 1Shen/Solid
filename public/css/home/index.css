@@ -127,11 +127,10 @@ body {
 
 .user_doc {
     margin-top: 15px;
-    color: blue;
 }
 
 .user_doc a {
-    color: blue;
+    color: #2222ff;
     font-size: 17.2px;
     transition: 0.4s;
 }
