@@ -235,7 +235,7 @@
             <div class="title" data-text="text6" data-placement="left" title="压力机">
                 <img src="/static/images/instruction/press.png" alt="">
             </div>
-            <div class="title fixed active" data-text="text7" data-placement="left" title="游戏说明">
+            <div class="title fixed active" data-text="text7" data-placement="left" title="实验说明">
                 <img class="img-m" src="/static/images/instruction/trophy.png" alt="">
                 <!-- <i style="color: #FFB90F;" class="fa fa-trophy" aria-hidden="true"></i> -->
             </div>

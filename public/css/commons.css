@@ -233,3 +233,9 @@ nav .container-fluid {
     line-height: 19px;
     height: 60px;
 }
+
+#errorList td {
+    padding: 0px 9px 3px 0px;
+    border: solid 1px black;
+    border-collapse: collapse;
+}
