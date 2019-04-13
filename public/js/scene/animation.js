@@ -299,6 +299,7 @@ function initPressAnime() {
 
         if (top.count < press.needFix) {
             showErrorMsg('请先固定压模');
+            recordError('请先固定压模');
             return;
         }
 

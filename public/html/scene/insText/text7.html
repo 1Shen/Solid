@@ -22,7 +22,7 @@
 
     <div class="ins-container">
 
-        <div class="ins-title">得分</div>
+        <div class="ins-title">考核明细</div>
 
         <div class="ins-content font-sm">
 
@@ -31,7 +31,39 @@
                 <div class="ins-row-full">
                     <div class="margin-top-sm">本实验采用扣分制，以下两种行为会导致不同程度的扣分。</div>
                     <div class="margin-top-sm">1、点击提示按钮查看提示（<span class="high">一次扣1.5分</span>）</div>
-                    <div class="margin-top-sm">2、出现错误操作（<span class="high">每次扣分不定</span>）</div>
+                    <div class="margin-top-sm">2、出现错误操作（<span class="high">每次扣分不定</span>）
+                        <!-- <div class="margin-left-1x">1）未按正确比例混合样品与溴化钾即开始研磨</div>
+                        <div class="margin-left-1x">2）制作装片时加压过大，损坏压模</div>
+                        <div class="margin-left-1x">3）压力机处于施压状态时取出压模</div>
+                        <div class="margin-left-1x">4）固体粉末尚未充分研磨即取出</div>
+                        <div class="margin-left-1x">5）未固定压模即开始施压</div> -->
+                        <table id="errorList" class="margin-top-1x">
+                            <tr>
+                                <td>错误操作</td>
+                                <td>扣分</td>
+                            </tr>
+                            <tr>
+                                <td>未按正确比例混合样品与溴化钾即开始研磨</td>
+                                <td><span class="high">2分</span></td>
+                            </tr>
+                            <tr>
+                                <td>制作装片时加压过大，损坏压模</td>
+                                <td><span class="high">5分</span></td>
+                            </tr>
+                            <tr>
+                                <td>压力机处于施压状态时取出压模</td>
+                                <td><span class="high">2分</span></td>
+                            </tr>
+                            <tr>
+                                <td>固体粉末尚未充分研磨即取出</td>
+                                <td><span class="high">3分</span></td>
+                            </tr>
+                            <tr>
+                                <td>未固定压模即开始施压</td>
+                                <td><span class="high">3分</span></td>
+                            </tr>
+                        </table>
+                    </div>
                     <div class="margin-top-1x">实验进行的总时长也会作为系数被考虑在内。</div>
                 </div>
 

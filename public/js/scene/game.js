@@ -233,6 +233,7 @@ var action = {
         "mixture-agate_mortar": {
             do: function () {
                 showErrorMsg('固体粉末尚未充分研磨');
+                recordError('固体粉末尚未充分研磨');
             }
         },
 
