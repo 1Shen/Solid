@@ -578,7 +578,7 @@ function initGrindAnime() {
 
         }, 4000).onStart(function () {
 
-            removeHighlight("empty-agate_mortar");
+            removeHighlight("mixture-agate_mortar");
             removeHighlight("agate_pestle");
 
         }).onComplete(function () {
@@ -588,7 +588,7 @@ function initGrindAnime() {
 
             animation['grind'].onPlayDone();
 
-            addHighlight("empty-agate_mortar");
+            addHighlight("mixture-agate_mortar");
             addHighlight("agate_pestle");
 
         }).start();

@@ -138,4 +138,11 @@ body {
 .user_doc a:hover {
     color: #1E9FFF;
     text-decoration: underline;
+    padding-left: 9px;
+}
+
+.user_doc a::before {
+    font-size: 0.9em;
+    content: "\f0c1";
+    font-family: FontAwesome;
 }
