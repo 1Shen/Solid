@@ -7,7 +7,14 @@
 
     <div class="container">
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
-            <legend>{{ $user->username }}最近的实验记录</legend>
+            <legend>
+                @if (Auth::User()->role == 1)
+                    所有学生
+                @else
+                    {{ $user->username }}
+                @endif
+                最近的实验记录
+            </legend>
         </fieldset>
         <table class="layui-hide" id="test" lay-filter="test"></table>
         <script type="text/html" id="toolbarDemo">
