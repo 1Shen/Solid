@@ -59,9 +59,6 @@
                                 <div class="subcontent">
                                     <p>溴化钾（Potassium bromide），化学式为KBr，相对分子质量为119.00。</p>
                                     <p>无色结晶或白色粉末，有强烈咸味，见光色变黄。稍有吸湿性。1g溶于1.5ml水，水溶液呈中性。相对密度为2.75。熔点730℃。沸点1435℃。有刺激性。主要用于光谱分析，点滴分析测定铜及银，极谱分析铟、镉和砷，显影剂。</p>
-                                    <div class="content-img">
-                                        <img src="/static/images/img/hexane.jpg" alt="">
-                                    </div>
                                 </div>
                             </div>
                             <div class="layui-tab-item">
