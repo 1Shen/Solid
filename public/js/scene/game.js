@@ -239,8 +239,15 @@ var action = {
 
         "product-agate_mortar": {
             do: function () {
-                fetchReagent('product-agate_mortar', 'empty-spoon');
                 //showValMsg('product-agate_mortar');
+                
+                let bowl = global.object.model['product-agate_mortar'].modelObject;
+
+                animation['spoon_fetch'].onPlayDone = function () {
+                    fetchReagent('product-agate_mortar', 'empty-spoon');
+                }
+
+                animation['spoon_fetch'].play(bowl.position.x + 6, bowl.position.y + 50, bowl.position.z);
             }
         }
     },

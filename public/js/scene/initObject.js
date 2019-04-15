@@ -98,6 +98,7 @@ function initLocation() {
     model.show(520, -24, 20);
 
     var model = global.object.model['infrared_analyzer_cover'].modelObject;
+    model.children[0].material.color.setHex(0x7d7dca);
     model.scale.set(0.9, 0.9, 0.9);
     model.show(530, 29, -20);
 
