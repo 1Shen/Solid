@@ -48,8 +48,8 @@
                     }
                     @if (Auth::User()->role == 1)
                     , {
-                        field: 'name',
-                        title: '姓名',
+                        field: 'username',
+                        title: '用户名',
                         width: 100
                     }
                     @endif
